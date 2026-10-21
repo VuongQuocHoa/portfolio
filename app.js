@@ -14,6 +14,7 @@ const projectsData = [
     shortDesc: "Hệ thống mô phỏng 3D khí động học thời gian thực: Tự tay lắp ráp 6 mô-đun tên lửa, mô phỏng xung lực khí nén ngang Lockheed Martin DACS, điều khiển góc nhìn thứ ba TPS (Pointer Lock) và làm chậm thời gian Bullet-Time.",
     repoPath: "d:\\PROJECTS\\lockheed-dacs",
     githubUrl: "https://github.com/VuongQuocHoa/lockheed-dacs",
+    liveUrl: "https://vuongquochoa.github.io/lockheed-dacs/",
     demoGuide: "Chạy trực tiếp: http://localhost:8088 hoặc nhấp đúp file index.html",
     tags: ["Three.js (r128)", "WebGL", "Pointer Lock API", "WebAudio API", "Proportional Navigation", "Physics Engine", "JavaScript ES6"],
     specs: {
@@ -51,6 +52,7 @@ const projectsData = [
     shortDesc: "Hệ thống thị giác máy tính công nghiệp đo lường kích thước 3D và ước lượng khối lượng vật thể thời gian thực qua camera đơn, kết hợp quang học chiều sâu phối cảnh và mạng nơ-ron hồi quy bù sai số.",
     repoPath: "d:\\PROJECTS\\predict-mass",
     githubUrl: "https://github.com/VuongQuocHoa/predict-mass",
+    liveUrl: "https://vuongquochoa.github.io/predict-mass/",
     demoGuide: "Streamlit Live Dashboard (http://localhost:8501) | Camera 60 FPS (python run_camera.py)",
     tags: ["YOLOv11n-seg", "OpenCV", "ONNX Runtime", "OpenVINO", "PTQ INT8", "Perspective Geometry", "Streamlit", "Python"],
     specs: {
@@ -90,6 +92,7 @@ const projectsData = [
     shortDesc: "Dịch vụ nhận diện khuôn mặt sinh trắc học chuẩn microservice hiệu năng cao, trích xuất 512D facial embedding, lưu trữ và đối soát vector bằng ChromaDB, kèm client Android CyberHUD độc lập.",
     repoPath: "d:\\PROJECTS\\detect-face",
     githubUrl: "https://github.com/VuongQuocHoa/detect-face",
+    liveUrl: "https://vuongquochoa.github.io/detect-face/",
     demoGuide: "FastAPI Swagger Docs (http://localhost:8000/docs) | File APK cài đặt: dist/FaceID_CyberHUD.apk",
     tags: ["FastAPI", "InsightFace Buffalo_l", "ChromaDB", "Cosine Similarity", "Android APK", "OpenVINO", "PWA WebAPK"],
     specs: {
@@ -130,6 +133,7 @@ const projectsData = [
     shortDesc: "Hệ thống ERP số hóa vùng nguyên liệu cho Hợp tác xã (HTX) và đội sản xuất: quản lý hộ nông dân, nhật ký phân bón/thuốc bảo vệ thực vật, theo dõi chu kỳ mùa vụ và dashboard dự báo sản lượng cho siêu thị.",
     repoPath: "d:\\PROJECTS\\mobiagri-app",
     githubUrl: "https://github.com/VuongQuocHoa/mobiagri-app",
+    liveUrl: "https://vuongquochoa.github.io/mobiagri-app/",
     demoGuide: "React 18 + Vite Farm ERP (http://localhost:5173) & Express RESTful API Backend",
     tags: ["React 18", "Vite", "Node.js", "Express", "Prisma ORM", "SQLite", "REST API", "Responsive CSS"],
     specs: {
@@ -167,6 +171,7 @@ const projectsData = [
     shortDesc: "Hệ sinh thái kết nối ByteDance Coze API v3 toàn diện: Giao diện Web SPA cao cấp, Reverse Proxy chống CORS không phụ thuộc thư viện ngoài, Serverless Edge Function và Client Python Terminal cho nghiệp vụ số hóa nhật ký canh tác VietGAP.",
     repoPath: "d:\\PROJECTS\\coze-agent",
     githubUrl: "https://github.com/VuongQuocHoa/coze-agent",
+    liveUrl: "https://vuongquochoa.github.io/coze-agent/",
     demoGuide: "Web Chat (http://localhost:3000) & Python Terminal (python chat.py)",
     tags: ["Coze API v3", "LLM Streaming SSE", "Node.js", "Python", "Vercel Serverless", "VietGAP Farm Logging"],
     specs: {
@@ -206,6 +211,7 @@ const projectsData = [
     shortDesc: "Ứng dụng web trực quan hóa 1.440 phút trong ngày theo vòng tròn năng lượng 24h, tích hợp cảm biến trình duyệt, thuật toán phân bổ góc Canvas/SVG và chatbot quy tắc nội bộ không độ trễ.",
     repoPath: "d:\\PROJECTS\\follow",
     githubUrl: "https://github.com/VuongQuocHoa/chronos-life-os",
+    liveUrl: "https://vuongquochoa.github.io/chronos-life-os/",
     demoGuide: "Trải nghiệm trực tiếp trên trình duyệt: http://localhost:8080 (100/100 Lighthouse)",
     tags: ["Vanilla JS (ES6 Modules)", "HTML5 Canvas/SVG", "CSS Glassmorphism", "Browser Sensors", "Rule Engine", "Node.js"],
     specs: {
@@ -238,6 +244,7 @@ const projectsData = [
     shortDesc: "Bot cào dữ liệu đa luồng quét sản phẩm Flash Sale trên sàn TMĐT Shopee, áp dụng thuật toán chấm điểm deal hời và bắn cảnh báo tức thời về điện thoại qua Telegram Webhook.",
     repoPath: "d:\\PROJECTS\\shopee-deal-sniper",
     githubUrl: "https://github.com/VuongQuocHoa/shopee-deal-sniper",
+    liveUrl: "https://vuongquochoa.github.io/shopee-deal-sniper/",
     demoGuide: "Giao diện giám sát Deal thời gian thực (http://localhost:3000) & Bot Telegram Alert",
     tags: ["Node.js", "Express", "Telegram Bot API", "Web Scraping", "Data Filtering", "Anti Rate-limit"],
     specs: {
@@ -269,6 +276,7 @@ const projectsData = [
     shortDesc: "Trợ lý bán hàng thông minh tích hợp Facebook Messenger qua Graph API, sử dụng Google Gemini 1.5 Flash để tự động tư vấn sản phẩm, thấu hiểu ngữ cảnh và thu thập số điện thoại đặt hàng.",
     repoPath: "d:\\PROJECTS\\fb-ai-bot",
     githubUrl: "https://github.com/VuongQuocHoa/fb-ai-bot",
+    liveUrl: "https://vuongquochoa.github.io/fb-ai-bot/",
     demoGuide: "Messenger Graph Webhook & Giao diện Live Transaction Logger: http://localhost:3000",
     tags: ["Node.js", "Google Gemini API", "Facebook Graph API", "Webhooks", "Live Logging", "Prompt Engineering"],
     specs: {
@@ -300,6 +308,7 @@ const projectsData = [
     shortDesc: "Agent AI tự động cào tin tức tài chính thị trường từ các nguồn RSS, sử dụng LangChain và OpenAI để trích xuất các ý chính và tự động phát bản tin lên Telegram.",
     repoPath: "d:\\PROJECTS\\d-fake",
     githubUrl: "https://github.com/VuongQuocHoa/ai-market-agent",
+    liveUrl: "https://vuongquochoa.github.io/ai-market-agent/",
     demoGuide: "LangChain RSS Pipeline & Kênh phát tin Telegram tự động (python main.py)",
     tags: ["Python", "LangChain", "OpenAI", "BeautifulSoup4", "Feedparser", "APScheduler", "Telegram Bot"],
     specs: {
@@ -380,6 +389,10 @@ function renderProjects(projects) {
           ${p.tags.map(t => `<span class="tech-tag-sm">${t}</span>`).join("")}
         </div>
         <div class="proj-actions no-print">
+          ${p.liveUrl ? `
+          <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #00F3FF; color: #00F3FF; background: rgba(0, 243, 255, 0.08); text-decoration: none; font-weight: 700;" title="Trải nghiệm trang web trực tiếp">
+            <span>🌐 Live Demo</span>
+          </a>` : ''}
           <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;" title="Xem mã nguồn trên GitHub">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
             <span>GitHub</span>
