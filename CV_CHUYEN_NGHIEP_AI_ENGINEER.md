@@ -85,16 +85,17 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ---
 
-### 4. Edu-Farm IoT Smart Wearable & Voice-to-Coze AI Agent
-*Vai trò: AI Agent Engineer • Công nghệ: ByteDance Coze API v3 Streaming (SSE), Python, Speech-to-Text, Google Sheets API*
+### 4. Coze AI Agent — Web Chat & API Streaming Gateway (VietGAP Farming Logging)
+*Vai trò: AI Agent & Full-Stack Engineer • Công nghệ: ByteDance Coze API v3, SSE Streaming, Node.js Proxy, Vercel Serverless, Python CLI*
 - **GitHub Repository:** [https://github.com/VuongQuocHoa/coze-agent](https://github.com/VuongQuocHoa/coze-agent)
-- **Trải nghiệm Demo:** Kịch bản thu âm giọng nói mô phỏng thiết bị đeo (`mophong.py`) & Webhook streaming Coze v3.
-- **Bối cảnh (Situation):** Nông dân trên đồng ruộng tay lấm lem khó gõ bàn phím điện thoại để nhập nhật ký canh tác theo lịch kiểm định nghiêm ngặt.
+- **Trải nghiệm Demo:** Web Chat SPA (`http://localhost:3000`) & Python Terminal Streaming Client (`python chat.py`).
+- **Bối cảnh (Situation):** Kỹ thuật viên nông nghiệp và nông dân cần giải pháp số hóa nhật ký canh tác chuẩn VietGAP nhanh chóng; đồng thời việc kết nối trực tiếp ByteDance Coze API v3 từ trình duyệt gặp rào cản nghiêm trọng về bảo mật API Key, lỗi CORS và hiện tượng lặp/giật chữ khi nhận luồng Server-Sent Events (SSE).
 - **Giải pháp (Action):**
-  - Tích hợp Speech-to-Text thu âm giọng nói tiếng Việt tự nhiên và gửi dữ liệu dạng dòng chảy (Server-Sent Events - SSE) lên Coze AI Bot API v3.
-  - Thiết kế Prompt Engineering trích xuất các thực thể có cấu trúc: [Thửa đất, Loại thuốc/phân bón, Liều lượng, Thời gian cách ly].
-  - Tự động gọi Google Sheets API để đồng bộ dữ liệu vào bảng tính quản lý của ban nông nghiệp.
-- **Kết quả (Result):** Giảm 90% thời gian nhập liệu, tăng tỷ lệ hoàn thành nhật ký canh tác lên 100%, nông dân chỉ cần nói tự nhiên 1 câu là dữ liệu đã được lưu chuẩn hóa.
+  - Xây dựng cổng trung gian Reverse Proxy bằng Node.js thuần (Zero-dependency, Hot-reload `.env`) và Vercel Serverless Function (`api/coze.js`) giải quyết triệt để lỗi CORS và bảo mật Token ở phía server.
+  - Phát triển thuật toán khử trùng lặp (Deduplication) luồng SSE giữa các sự kiện `conversation.message.delta` và `completed`, tự động lọc bỏ các token hệ thống rác.
+  - Thiết lập kịch bản nghiệp vụ VietGAP tự động dẫn dắt và chuẩn hóa thực thể mùa vụ [Cây trồng, Lô thửa, Hoạt động, Liều lượng, Người thực hiện].
+  - Xây dựng giao diện Web Chat Dark Mode cao cấp (TailwindCSS, Marked.js, Highlight.js, LocalStorage đa phiên) và client Python độc lập (`chat.py`).
+- **Kết quả (Result):** Phản hồi dòng chảy theo thời gian thực với độ trễ tối thiểu (<150ms TTFB), tăng 100% tỷ lệ hoàn thành nhật ký chuẩn VietGAP, hỗ trợ triển khai linh hoạt cả ở máy chủ cục bộ lẫn môi trường Cloud Serverless Vercel.
 
 ---
 

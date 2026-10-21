@@ -160,41 +160,41 @@ const projectsData = [
   },
   {
     id: "coze-agent",
-    title: "Edu-Farm IoT Smart Wearable & Voice-to-Coze AI Agent",
-    role: "AI Agent Engineer",
+    title: "Coze AI Agent — Web Chat & API Streaming Gateway",
+    role: "AI Agent & Full-Stack Engineer",
     category: "agent",
-    metricPill: "Voice-to-Text • Coze API v3 Streaming (SSE) • Google Sheets Sync",
-    shortDesc: "Hệ thống mô phỏng thiết bị đeo IoT thu âm giọng nói tiếng Việt tự nhiên của nông dân ngoài đồng, tự động trích xuất thực thể canh tác có cấu trúc bằng Coze LLM và đồng bộ Google Sheets.",
+    metricPill: "Coze API v3 • SSE Real-Time Streaming • Node.js Proxy & Vercel Edge",
+    shortDesc: "Hệ sinh thái kết nối ByteDance Coze API v3 toàn diện: Giao diện Web SPA cao cấp, Reverse Proxy chống CORS không phụ thuộc thư viện ngoài, Serverless Edge Function và Client Python Terminal cho nghiệp vụ số hóa nhật ký canh tác VietGAP.",
     repoPath: "d:\\PROJECTS\\coze-agent",
     githubUrl: "https://github.com/VuongQuocHoa/coze-agent",
-    demoGuide: "Mô phỏng thu âm giọng nói (mophong.py) & Coze API v3 SSE Stream",
-    tags: ["Coze API v3", "LLM Streaming SSE", "Python", "Speech-to-Text", "Google Sheets API", "IoT Simulation"],
+    demoGuide: "Web Chat (http://localhost:3000) & Python Terminal (python chat.py)",
+    tags: ["Coze API v3", "LLM Streaming SSE", "Node.js", "Python", "Vercel Serverless", "VietGAP Farm Logging"],
     specs: {
       "Mô hình AI": "ByteDance Coze Bot API v3 (Streaming Mode)",
-      "Đầu vào": "Giọng nói tiếng Việt tự nhiên (Speech Audio Stream)",
-      "Đầu ra cấu trúc": "JSON Schema: [Thửa đất, Loại phân bón, Liều lượng, Thời gian]",
-      "Tích hợp tự động": "Webhook đồng bộ bảng tính Google Sheets thời gian thực",
-      "Độ trễ": "Phản hồi dòng chảy (Server-Sent Events) tức thì",
-      "Demo khả dụng": "Script thu âm giọng nói & Webhook sync Google Sheets"
+      "Kiến trúc Proxy": "Node.js Native HTTP Reverse Proxy + Vercel Serverless Function",
+      "Giao thức mạng": "Server-Sent Events (SSE) với thuật toán Deduplication khử lặp chữ",
+      "Giao diện người dùng": "Single Page App (TailwindCSS, Marked.js, Highlight.js, Dark Mode)",
+      "Độ trễ": "Phản hồi dòng chảy tức thời (<150ms TTFB)",
+      "Kịch bản nghiệp vụ": "Số hóa nhật ký nông nghiệp VietGAP tự động trích xuất thực thể"
     },
     diagram:
-`[Giọng nói nông dân] ──> [Speech-to-Text] ──> [Python Streaming Gateway]
-                                                    │
-                                                    ▼ (Coze API v3 SSE Stream)
-                                            [Coze AI Agent Engine]
-                                                    │
-                        ┌───────────────────────────┴───────────────────────────┐
-                        ▼                                                       ▼
-            [Trích xuất Entities JSON]                              [Phản hồi xác nhận giọng nói]
-        (Thửa đất, Loại thuốc, Liều lượng)                              (Tự động đọc lại)
-                        │
-                        ▼
-              [Google Sheets Sync]`,
+`[Web Chat SPA / Python CLI] ──> [Node.js Proxy / Vercel Function] (CORS & Token Masking)
+                                                │
+                                                ▼ (SSE Stream POST /v3/chat)
+                                       [Coze AI Agent Cloud]
+                                                │
+                    ┌───────────────────────────┴───────────────────────────┐
+                    ▼                                                       ▼
+        [Deduplication Filter]                                 [VietGAP Entity Parsing]
+    (Khử lặp delta & token rác)                          (Cây trồng, Lô thửa, Liều lượng)
+                    │                                                       │
+                    ▼                                                       ▼
+        [Hiển thị gõ chữ mượt mà]                             [Chuẩn hóa dữ liệu mùa vụ]`,
     star: {
-      situation: "Nông dân lao động ngoài đồng tay lấm lem khó gõ điện thoại để nhập nhật ký canh tác theo lịch kiểm định nghiêm ngặt.",
-      task: "Tạo giải pháp rảnh tay (hands-free) bằng giọng nói tiếng Việt, tự động bóc tách dữ liệu chuẩn hóa và lưu trữ trực tuyến.",
-      action: "Tích hợp Speech-to-Text với Coze API v3 Streaming (Server-Sent Events), thiết kế Structured Prompt trích xuất thực thể theo mẫu VietGAP và tự động ghi vào Google Sheets API.",
-      result: "Giảm 90% thời gian nhập liệu, tỷ lệ hoàn thành nhật ký canh tác đạt 100%, nông dân chỉ cần nói tự nhiên 1 câu là dữ liệu đã được lưu chuẩn xác."
+      situation: "Nông dân và cán bộ nông nghiệp cần công cụ số hóa nhật ký mùa vụ chuẩn VietGAP; đồng thời kết nối trực tiếp Coze API v3 từ trình duyệt gặp rào cản về bảo mật API Key, lỗi CORS và xung đột lặp chữ khi nhận SSE.",
+      task: "Xây dựng hệ thống Web Chat & Gateway bảo mật, tối ưu luồng truyền tải thời gian thực và tự động hóa quy trình ghi chép nhật ký nông nghiệp.",
+      action: "Phát triển Reverse Proxy Node.js thuần (Zero-dependency, Hot-reload .env) và Vercel Serverless; lập trình thuật toán SSE Deduplication lọc token rác; xây dựng Web SPA Dark Mode và client Python dòng lệnh.",
+      result: "Cắt giảm 90% thời gian nhập liệu, độ trễ hiển thị tức thì (<150ms), hỗ trợ triển khai linh hoạt cả ở máy chủ cục bộ lẫn môi trường Cloud Serverless Vercel."
     }
   },
   {
