@@ -1,0 +1,121 @@
+# QUỐC HÒA
+**APPLIED AI & FULL-STACK SOFTWARE ENGINEER**
+
+- **Địa điểm:** TP. Hồ Chí Minh, Việt Nam
+- **Email:** [quochoa.tech@gmail.com](mailto:quochoa.tech@gmail.com) *(hoặc email của bạn)*
+- **Điện thoại / Zalo:** [09xx xxx xxx] *(điền SĐT của bạn)*
+- **GitHub:** [https://github.com/quochoa](https://github.com/quochoa) *(hoặc username GitHub của bạn)*
+- **Vị trí ứng tuyển:** AI Engineer / Computer Vision Engineer / Full-Stack Software Engineer
+- **Tình trạng:** Sẵn sàng tiếp nhận công việc (Full-time / On-site / Remote)
+
+---
+
+## 🌟 01. TÓM TẮT NĂNG LỰC CỐT LÕI (PROFESSIONAL SUMMARY)
+
+Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied AI)**, **Thị giác máy tính (Computer Vision)** và **Kiến trúc hệ thống Full-Stack**. 
+- **Cầu nối AI & Production:** Có năng lực làm chủ trọn vẹn vòng đời sản phẩm từ nghiên cứu mô hình, tối ưu hóa suy luận trên phần cứng biên (Edge AI, Lượng tử hóa INT8 PTQ, OpenVINO, pipeline bất đồng bộ **60 FPS zero-lag**) đến triển khai microservice phân tán (FastAPI, ChromaDB Vector DB) và phát triển ứng dụng người dùng cuối hoàn chỉnh (React 18, Vite, Node.js, Android APK).
+- **Tư duy kỹ thuật định lượng (Metrics-Driven):** Luôn đo lường hiệu năng bằng số liệu thực tế (độ trễ <17ms, tiết kiệm 50% RAM, Lighthouse 100/100, triệt tiêu 100% nghẽn cổ chai).
+- **Tác phong làm việc:** Chủ động nhận trách nhiệm trọn gói (End-to-End Ownership), cam kết chất lượng mã nguồn tinh gọn và giải quyết triệt để bài toán kinh doanh.
+
+---
+
+## 🛠 02. BẢNG NĂNG LỰC KỸ THUẬT (TECHNICAL COMPETENCIES)
+
+| Danh mục | Công nghệ & Kỹ năng làm chủ |
+| :--- | :--- |
+| **AI & Computer Vision** | YOLOv11n-seg / YOLOv8, InsightFace (Buffalo_l), OpenCV, ArUco Marker PPM, Perspective Depth Geometry, Ellipse Fitting, MLP Mass Regressor. |
+| **Edge AI & Tối ưu hóa** | ONNX Runtime, Post-Training Quantization (PTQ FP32 → INT8), OpenVINO Execution Provider (SIMD), TensorRT, Decoupled Asynchronous Grabber (60 FPS), Anti-ghosting motion filter. |
+| **GenAI & Autonomous Agents** | ByteDance Coze API v3 (SSE Streaming), Google Gemini 1.5 Flash, LangChain, ChromaDB Persistent Vector Database, Speech-to-Text integration, Structured Prompt Engineering. |
+| **Backend & Microservices** | Python (FastAPI, Uvicorn, Multiprocessing, AsyncIO), Node.js (Express), Prisma ORM, SQLite, PostgreSQL, RESTful API Design, Webhooks & SSE. |
+| **Frontend & Nền tảng** | React 18, Vite, Vanilla JavaScript (ES6 Modules thuần, Zero external dependencies), HTML5 Canvas / SVG, Đóng gói ứng dụng di động Android APK. |
+| **Tự động hóa & Khác** | Puppeteer, Cheerio, BeautifulSoup4, Telegram Bot Webhook, Facebook Graph API, Git / GitHub, Agile / Scrum. |
+
+---
+
+## 🚀 03. KINH NGHIỆM THỰC CHIẾN & DỰ ÁN KỸ THUẬT (FEATURED PROJECTS)
+
+### 1. Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI Học Máy
+*Vai trò: Lead AI Engineer • Công nghệ: YOLOv11n-seg, OpenCV, ONNX Runtime INT8, OpenVINO, Python*
+- **Bối cảnh (Situation):** Dây chuyền công nghiệp cần đo khối lượng sản phẩm trực tiếp trên băng chuyền di động mà không làm dừng luồng di chuyển. Camera đơn thông thường bị sai số lớn do góc nghiêng và khoảng cách quang học thay đổi.
+- **Giải pháp (Action):**
+  - Thiết kế kiến trúc **Decoupled Asynchronous Pipeline**: Tách riêng luồng Camera Grabber (60 FPS) đẩy khung hình vào hàng đợi bất đồng bộ khỏi luồng AI Worker (35 FPS).
+  - Kết hợp phép chiếu hình học phối cảnh (ArUco Marker PPM, bù góc $\cos\theta$) với mạng nơ-ron MLP 12 chiều đặc trưng để bù trừ biến dạng phi tuyến tính.
+  - Lượng tử hóa sau huấn luyện (PTQ) từ FP32 sang INT8 bằng ONNX Runtime, cấu hình OpenVINO Execution Provider tăng tốc tập lệnh SIMD trên CPU.
+- **Kết quả (Result):** Triệt tiêu 100% hiện tượng trễ tích lũy khung hình, camera đạt 60 FPS mượt mà (<17ms độ trễ hiển thị), dung lượng mô hình giảm gần 50%, thời gian suy luận AI tăng tốc 1.8 lần.
+
+---
+
+### 2. InsightFace FaceID CyberHUD & Microservice (FastAPI + ChromaDB + Android APK)
+*Vai trò: Backend & Vision Engineer • Công nghệ: FastAPI, InsightFace Buffalo_l, ChromaDB, Android APK*
+- **Bối cảnh (Situation):** Nhu cầu điểm danh và kiểm soát an ninh sinh trắc học thời gian thực đòi hỏi độ chính xác cao, lưu trữ hàng ngàn vector khuôn mặt và hỗ trợ thiết bị di động kết nối nội bộ.
+- **Giải pháp (Action):**
+  - Trích xuất 512D facial embedding bằng InsightFace Buffalo_l, chuẩn hóa vector và lưu vào ChromaDB persistent collection với khoảng cách Cosine Similarity.
+  - Viết thuật toán chống rung lắc (anti-ghosting) và ghim người lạ (stranger pinning filter) khi khuôn mặt di chuyển nhanh.
+  - Đóng gói ứng dụng Android APK độc lập cho phép quét tìm và kết nối đến AI Server qua mạng Wi-Fi nội bộ (LAN).
+- **Kết quả (Result):** Thời gian phản hồi nhận diện < 50ms cho mỗi khuôn mặt, vận hành mượt mà trên cả trình duyệt PWA và app Android di động.
+
+---
+
+### 3. MobiAgri — Nền Tảng Chuyển Đổi Số Nông Nghiệp & Quản Lý Vùng Nguyên Liệu
+*Vai trò: Full-Stack Developer • Công nghệ: React 18, Vite, Node.js, Express, Prisma ORM, SQLite*
+- **Bối cảnh (Situation):** Các Hợp tác xã (HTX) ghi chép nhật ký phân bón, thuốc BVTV thủ công trên giấy, dễ thất lạc và không đủ cơ sở dữ liệu kiểm định đạt chuẩn VietGAP khi cung ứng cho chuỗi siêu thị.
+- **Giải pháp (Action):**
+  - Thiết kế kiến trúc CSDL quan hệ chuẩn với Prisma ORM; xây dựng hệ thống REST API Express phân quyền nhiều cấp (Admin HTX, Xã viên).
+  - Phát triển giao diện React Vite hiện đại, tối ưu trải nghiệm nhập liệu trực tiếp trên điện thoại ngoài ruộng.
+- **Kết quả (Result):** Số hóa 100% dữ liệu mùa vụ, cắt giảm 80% thời gian tổng hợp báo cáo kiểm định, cung cấp dashboard giúp HTX chủ động đàm phán hợp đồng thu mua trước mùa gặt 2-3 tuần.
+
+---
+
+### 4. Edu-Farm IoT Smart Wearable & Voice-to-Coze AI Agent
+*Vai trò: AI Agent Engineer • Công nghệ: ByteDance Coze API v3 Streaming (SSE), Python, Speech-to-Text, Google Sheets API*
+- **Bối cảnh (Situation):** Nông dân trên đồng ruộng tay lấm lem khó gõ bàn phím điện thoại để nhập nhật ký canh tác theo lịch kiểm định nghiêm ngặt.
+- **Giải pháp (Action):**
+  - Tích hợp Speech-to-Text thu âm giọng nói tiếng Việt tự nhiên và gửi dữ liệu dạng dòng chảy (Server-Sent Events - SSE) lên Coze AI Bot API v3.
+  - Thiết kế Prompt Engineering trích xuất các thực thể có cấu trúc: [Thửa đất, Loại thuốc/phân bón, Liều lượng, Thời gian cách ly].
+  - Tự động gọi Google Sheets API để đồng bộ dữ liệu vào bảng tính quản lý của ban nông nghiệp.
+- **Kết quả (Result):** Giảm 90% thời gian nhập liệu, tăng tỷ lệ hoàn thành nhật ký canh tác lên 100%, nông dân chỉ cần nói tự nhiên 1 câu là dữ liệu đã được lưu chuẩn hóa.
+
+---
+
+### 5. Chronos Pro Life OS — Hệ Điều Hành Quản Trị Nhịp Sống 24 Giờ
+*Vai trò: Frontend Architect • Công nghệ: Pure Vanilla JavaScript (ES6 Modules), HTML5 Canvas/SVG, CSS Glassmorphism*
+- **Bối cảnh (Situation):** Các ứng dụng quản lý thời gian trên thị trường nặng nề, phụ thuộc vào quá nhiều thư viện ngoài và không đem lại trải nghiệm trực quan theo chu kỳ ngày.
+- **Giải pháp (Action):**
+  - Tự lập trình toàn bộ thuật toán hình học Canvas/SVG để hiển thị 1.440 phút trong ngày theo vòng tròn năng lượng.
+  - Sử dụng kiến trúc module hóa ES6 thuần túy (Zero external dependencies), lưu trữ dữ liệu bền vững trên trình duyệt (localStorage).
+  - Tích hợp cảm biến trình duyệt và Native Rule Engine Chatbot tư vấn quản trị nhịp sinh học không độ trễ.
+- **Kết quả (Result):** Đạt điểm số tuyệt đối 100/100 trên Google Lighthouse, tốc độ tải trang dưới 50ms, vận hành mượt mà 60 FPS.
+
+---
+
+### 6. Shopee Deal Sniper & High-Frequency Price Scraper
+*Vai trò: Automation Engineer • Công nghệ: Node.js, Express, Puppeteer/Cheerio, Telegram Bot API*
+- Xây dựng bot cào dữ liệu TMĐT đa luồng quét sản phẩm Flash Sale; phát triển thuật toán lọc và chấm điểm deal hời `filterAndScoreItems`.
+- Tích hợp cơ chế ngắt nhịp chống rate-limit IP và Telegram Bot Webhook thông báo deal giá tốt đến điện thoại trong vòng < 3 giây.
+
+---
+
+### 7. Fanpage AI Customer Assistant (Google Gemini 1.5 Flash)
+*Vai trò: AI Engineer • Công nghệ: Node.js, Google Gemini API, Facebook Graph API Webhooks*
+- Phát triển chatbot chăm sóc khách hàng tự động trên Facebook Messenger ứng dụng mô hình Google Gemini 1.5 Flash.
+- Thiết kế kịch bản prompt theo phễu bán hàng, tự động thấu hiểu ý định mua sắm và thu thập tên cùng số điện thoại đặt hàng 24/7.
+
+---
+
+## 🎯 04. GÓC PHỎNG VẤN KỸ THUẬT (INTERVIEW QUESTIONS PREP)
+
+- **Q: Cách bạn giải quyết triệt để nghẽn cổ chai (bottleneck) khi suy luận AI trên luồng video thời gian thực?**
+  - *Trả lời:* Sử dụng kiến trúc **Decoupled Asynchronous Pipeline**. Tách luồng Camera Grabber (60 FPS) độc lập khỏi luồng AI Inference (35 FPS) qua bộ nhớ đệm vòng tròn (Ring buffer). Luồng AI luôn lấy khung hình mới nhất và bỏ qua khung hình cũ, triệt tiêu hoàn toàn độ trễ tích lũy và duy trì 60 FPS mượt mà cho mắt người dùng.
+- **Q: Lợi thế của việc lượng tử hóa INT8 PTQ trên thiết bị nhúng là gì?**
+  - *Trả lời:* Giảm 50% kích thước mô hình, tiết kiệm băng thông nhớ và điện năng. Khi kết hợp với OpenVINO Execution Provider, các phép toán ma trận được ánh xạ vào tập lệnh SIMD đa luồng, tăng tốc độ suy luận gấp 1.8 lần mà độ chính xác gần như không suy giảm.
+- **Q: Làm sao để kiểm soát tính chính xác của LLM khi tích hợp vào quy trình thực tế?**
+  - *Trả lời:* Áp dụng Structured Outputs với JSON Schema định sẵn, thiết kế System Prompt ràng buộc vai trò chặt chẽ (Guardrails), sử dụng cơ chế Streaming SSE để giảm tối đa Time-to-First-Token và tích hợp cơ chế xác nhận lại với người dùng trước khi ghi vào CSDL.
+
+---
+
+## 🎓 05. HỌC VẤN & THÔNG TIN BỔ SUNG (EDUCATION & DETAILS)
+
+- **Chuyên ngành:** Công nghệ Thông tin / Kỹ thuật Phần mềm (Software Engineering / Computer Science)
+- **Hình thức làm việc mong muốn:** Full-time (On-site / Hybrid / Remote)
+- **Mức lương mong muốn:** Thỏa thuận theo năng lực và phạm vi đóng góp cho dự án.
+- **Thời gian có thể nhận việc:** Bắt đầu ngay lập tức.
