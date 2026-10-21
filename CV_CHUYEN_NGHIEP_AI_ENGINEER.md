@@ -1,10 +1,10 @@
-# QUỐC HÒA
+# VƯƠNG QUỐC HÒA
 **APPLIED AI & FULL-STACK SOFTWARE ENGINEER**
 
 - **Địa điểm:** TP. Hồ Chí Minh, Việt Nam
-- **Email:** [quochoa.tech@gmail.com](mailto:quochoa.tech@gmail.com) *(hoặc email của bạn)*
-- **Điện thoại / Zalo:** [09xx xxx xxx] *(điền SĐT của bạn)*
-- **GitHub:** [https://github.com/quochoa](https://github.com/quochoa) *(hoặc username GitHub của bạn)*
+- **Email:** [hoalkasd@gmail.com](mailto:hoalkasd@gmail.com)
+- **Điện thoại / Zalo:** [0399911382](tel:0399911382)
+- **GitHub:** [https://github.com/VuongQuocHoa](https://github.com/VuongQuocHoa)
 - **Vị trí ứng tuyển:** AI Engineer / Computer Vision Engineer / Full-Stack Software Engineer
 - **Tình trạng:** Sẵn sàng tiếp nhận công việc (Full-time / On-site / Remote)
 

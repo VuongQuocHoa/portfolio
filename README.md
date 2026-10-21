@@ -1,7 +1,7 @@
-# 🌟 Portfolio Kỹ Sư Công Nghệ — Hoàng Đăng Khoa
+# 🌟 Portfolio Kỹ Sư Công Nghệ — Vương Quốc Hòa
 **Applied AI & Full-Stack Software Engineer**
 
-Dự án Portfolio chuyên nghiệp được xây dựng để nộp phỏng vấn các vị trí **AI Engineer, Computer Vision Engineer, Full-Stack Developer, và AI Solutions Engineer**, tập hợp 8 dự án thực chiến từ không gian làm việc của bạn.
+Dự án Portfolio chuyên nghiệp được xây dựng để nộp phỏng vấn các vị trí **AI Engineer, Computer Vision Engineer, Full-Stack Developer, và AI Solutions Engineer**, tập hợp các dự án thực chiến từ không gian làm việc của bạn.
 
 ---
 
@@ -47,11 +47,11 @@ Portfolio đã được tích hợp bộ định dạng in ấn chuyên dụng (
    git add .
    git commit -m "feat: release interview portfolio"
    git branch -M main
-   git remote add origin https://github.com/khoahd7621/portfolio.git
+   git remote add origin https://github.com/VuongQuocHoa/portfolio.git
    git push -u origin main
    ```
 3. Trên GitHub, vào **Settings** -> **Pages** -> Chọn nhánh **main** làm nguồn.
-4. Bạn sẽ có ngay link trực tuyến đẹp mắt: `https://khoahd7621.github.io/portfolio`
+4. Bạn sẽ có ngay link trực tuyến đẹp mắt: `https://vuongquochoa.github.io/portfolio`
 
 ---
 
@@ -61,8 +61,8 @@ Portfolio đã được tích hợp bộ định dạng in ấn chuyên dụng (
 d:\PROJECTS\portfolio\
 ├── index.html                           # Giao diện chính của Portfolio (Chuẩn SEO, Dark Theme)
 ├── style.css                            # Hệ thống thiết kế Glassmorphism & Print stylesheet
-├── app.js                               # Dữ liệu 8 dự án, bộ lọc tương tác, popup STAR & sao chép
-├── CV_HOANG_DANG_KHOA_AI_ENGINEER.md    # Bản tóm tắt CV định dạng Markdown nộp nhanh
+├── app.js                               # Dữ liệu dự án, bộ lọc tương tác, popup STAR & sao chép
+├── CV_CHUYEN_NGHIEP_AI_ENGINEER.md      # Bản tóm tắt CV định dạng Markdown nộp nhanh
 └── README.md                            # Hướng dẫn chi tiết sử dụng và xuất bản
 ```
 
