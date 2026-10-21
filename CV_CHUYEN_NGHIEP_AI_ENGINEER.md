@@ -36,6 +36,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 1. Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI Học Máy
 *Vai trò: Lead AI Engineer • Công nghệ: YOLOv11n-seg, OpenCV, ONNX Runtime INT8, OpenVINO, Python*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/predict-mass](https://github.com/VuongQuocHoa/predict-mass)
+- **Trải nghiệm Demo:** Giao diện Streamlit (`http://localhost:8501`) & Luồng camera 60 FPS (`python run_camera.py`).
 - **Bối cảnh (Situation):** Dây chuyền công nghiệp cần đo khối lượng sản phẩm trực tiếp trên băng chuyền di động mà không làm dừng luồng di chuyển. Camera đơn thông thường bị sai số lớn do góc nghiêng và khoảng cách quang học thay đổi.
 - **Giải pháp (Action):**
   - Thiết kế kiến trúc **Decoupled Asynchronous Pipeline**: Tách riêng luồng Camera Grabber (60 FPS) đẩy khung hình vào hàng đợi bất đồng bộ khỏi luồng AI Worker (35 FPS).
@@ -47,6 +49,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 2. InsightFace FaceID CyberHUD & Microservice (FastAPI + ChromaDB + Android APK)
 *Vai trò: Backend & Vision Engineer • Công nghệ: FastAPI, InsightFace Buffalo_l, ChromaDB, Android APK*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/detect-face](https://github.com/VuongQuocHoa/detect-face)
+- **Trải nghiệm Demo:** Tài liệu API Swagger (`http://localhost:8000/docs`) & File cài đặt Android APK (`dist/FaceID_CyberHUD.apk`).
 - **Bối cảnh (Situation):** Nhu cầu điểm danh và kiểm soát an ninh sinh trắc học thời gian thực đòi hỏi độ chính xác cao, lưu trữ hàng ngàn vector khuôn mặt và hỗ trợ thiết bị di động kết nối nội bộ.
 - **Giải pháp (Action):**
   - Trích xuất 512D facial embedding bằng InsightFace Buffalo_l, chuẩn hóa vector và lưu vào ChromaDB persistent collection với khoảng cách Cosine Similarity.
@@ -58,6 +62,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 3. MobiAgri — Nền Tảng Chuyển Đổi Số Nông Nghiệp & Quản Lý Vùng Nguyên Liệu
 *Vai trò: Full-Stack Developer • Công nghệ: React 18, Vite, Node.js, Express, Prisma ORM, SQLite*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/mobiagri-app](https://github.com/VuongQuocHoa/mobiagri-app)
+- **Trải nghiệm Demo:** Web App React 18 + Vite (`http://localhost:5173`) & Express RESTful API (`http://localhost:5000`).
 - **Bối cảnh (Situation):** Các Hợp tác xã (HTX) ghi chép nhật ký phân bón, thuốc BVTV thủ công trên giấy, dễ thất lạc và không đủ cơ sở dữ liệu kiểm định đạt chuẩn VietGAP khi cung ứng cho chuỗi siêu thị.
 - **Giải pháp (Action):**
   - Thiết kế kiến trúc CSDL quan hệ chuẩn với Prisma ORM; xây dựng hệ thống REST API Express phân quyền nhiều cấp (Admin HTX, Xã viên).
@@ -68,6 +74,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 4. Edu-Farm IoT Smart Wearable & Voice-to-Coze AI Agent
 *Vai trò: AI Agent Engineer • Công nghệ: ByteDance Coze API v3 Streaming (SSE), Python, Speech-to-Text, Google Sheets API*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/coze-agent](https://github.com/VuongQuocHoa/coze-agent)
+- **Trải nghiệm Demo:** Kịch bản thu âm giọng nói mô phỏng thiết bị đeo (`mophong.py`) & Webhook streaming Coze v3.
 - **Bối cảnh (Situation):** Nông dân trên đồng ruộng tay lấm lem khó gõ bàn phím điện thoại để nhập nhật ký canh tác theo lịch kiểm định nghiêm ngặt.
 - **Giải pháp (Action):**
   - Tích hợp Speech-to-Text thu âm giọng nói tiếng Việt tự nhiên và gửi dữ liệu dạng dòng chảy (Server-Sent Events - SSE) lên Coze AI Bot API v3.
@@ -79,6 +87,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 5. Chronos Pro Life OS — Hệ Điều Hành Quản Trị Nhịp Sống 24 Giờ
 *Vai trò: Frontend Architect • Công nghệ: Pure Vanilla JavaScript (ES6 Modules), HTML5 Canvas/SVG, CSS Glassmorphism*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/chronos-life-os](https://github.com/VuongQuocHoa/chronos-life-os)
+- **Trải nghiệm Demo:** Giao diện Web trực quan 24h (`http://localhost:8080`) — Đạt 100/100 Google Lighthouse.
 - **Bối cảnh (Situation):** Các ứng dụng quản lý thời gian trên thị trường nặng nề, phụ thuộc vào quá nhiều thư viện ngoài và không đem lại trải nghiệm trực quan theo chu kỳ ngày.
 - **Giải pháp (Action):**
   - Tự lập trình toàn bộ thuật toán hình học Canvas/SVG để hiển thị 1.440 phút trong ngày theo vòng tròn năng lượng.
@@ -90,6 +100,8 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 6. Shopee Deal Sniper & High-Frequency Price Scraper
 *Vai trò: Automation Engineer • Công nghệ: Node.js, Express, Puppeteer/Cheerio, Telegram Bot API*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/shopee-deal-sniper](https://github.com/VuongQuocHoa/shopee-deal-sniper)
+- **Trải nghiệm Demo:** Web Dashboard theo dõi Deal (`http://localhost:3000`) & Cảnh báo tức thời qua Telegram Bot.
 - Xây dựng bot cào dữ liệu TMĐT đa luồng quét sản phẩm Flash Sale; phát triển thuật toán lọc và chấm điểm deal hời `filterAndScoreItems`.
 - Tích hợp cơ chế ngắt nhịp chống rate-limit IP và Telegram Bot Webhook thông báo deal giá tốt đến điện thoại trong vòng < 3 giây.
 
@@ -97,8 +109,18 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ### 7. Fanpage AI Customer Assistant (Google Gemini 1.5 Flash)
 *Vai trò: AI Engineer • Công nghệ: Node.js, Google Gemini API, Facebook Graph API Webhooks*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/fb-ai-bot](https://github.com/VuongQuocHoa/fb-ai-bot)
+- **Trải nghiệm Demo:** Dashboard quản trị cấu hình & Live Transaction Logging (`http://localhost:3000`).
 - Phát triển chatbot chăm sóc khách hàng tự động trên Facebook Messenger ứng dụng mô hình Google Gemini 1.5 Flash.
 - Thiết kế kịch bản prompt theo phễu bán hàng, tự động thấu hiểu ý định mua sắm và thu thập tên cùng số điện thoại đặt hàng 24/7.
+
+---
+
+### 8. Autonomous Market News AI Agent (LangChain + Telegram)
+*Vai trò: AI Agent Engineer • Công nghệ: Python, LangChain, OpenAI, BeautifulSoup4, APScheduler*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/ai-market-agent](https://github.com/VuongQuocHoa/ai-market-agent)
+- **Trải nghiệm Demo:** Kịch bản quét RSS tự động & Kênh phát tin Telegram định kỳ (`python main.py`).
+- Agent AI tự động cào tin tức tài chính thị trường từ các nguồn RSS, sử dụng LangChain và OpenAI để trích xuất các ý chính và tự động phát bản tin lên Telegram.
 
 ---
 

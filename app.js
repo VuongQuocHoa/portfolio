@@ -1,7 +1,7 @@
 /**
  * MINIMALIST TECH CV & PORTFOLIO ENGINE
- * Candidate: Quốc Hòa
- * Target: Applied AI & Full-Stack Software Engineer
+ * Candidate: Vương Quốc Hòa (Junior AI & Full-Stack Software Engineer)
+ * GitHub: https://github.com/VuongQuocHoa
  */
 
 const projectsData = [
@@ -13,16 +13,19 @@ const projectsData = [
     metricPill: "60 FPS Pipeline • INT8 PTQ (-50% RAM) • <17ms Latency",
     shortDesc: "Hệ thống thị giác máy tính công nghiệp đo lường kích thước 3D và ước lượng khối lượng vật thể thời gian thực qua camera đơn, kết hợp quang học chiều sâu phối cảnh và mạng nơ-ron hồi quy bù sai số.",
     repoPath: "d:\\PROJECTS\\predict-mass",
+    githubUrl: "https://github.com/VuongQuocHoa/predict-mass",
+    demoGuide: "Streamlit Live Dashboard (http://localhost:8501) | Camera 60 FPS (python run_camera.py)",
     tags: ["YOLOv11n-seg", "OpenCV", "ONNX Runtime", "OpenVINO", "PTQ INT8", "Perspective Geometry", "Streamlit", "Python"],
     specs: {
       "Mô hình AI": "YOLOv11n-seg (Nano) + MLP Regressor 12D",
       "Kỹ thuật đo quang học": "ArUco Marker PPM & Bù góc phối cảnh cos(θ)",
       "Tăng tốc phần cứng": "OpenVINO Execution Provider (CPU SIMD) / TensorRT",
       "Lượng tử hóa": "Post-Training Quantization (FP32 → INT8)",
-      "Kiến trúc luồng": "Decoupled Asynchronous Grabber (60 FPS zero-lag)"
+      "Kiến trúc luồng": "Decoupled Asynchronous Grabber (60 FPS zero-lag)",
+      "Demo khả dụng": "Streamlit Web Dashboard & Industrial Camera Grabber"
     },
-    diagram:
-      `[Camera Input (60 FPS)] 
+    diagram: 
+`[Camera Input (60 FPS)] 
        │
        ├── (Luồng 1) Decoupled Grabber (Async Queue) ──────> Giao diện Zero-lag (<17ms)
        │
@@ -49,16 +52,19 @@ const projectsData = [
     metricPill: "<50ms Nhận diện • ChromaDB Vector Search • Android APK",
     shortDesc: "Dịch vụ nhận diện khuôn mặt sinh trắc học chuẩn microservice hiệu năng cao, trích xuất 512D facial embedding, lưu trữ và đối soát vector bằng ChromaDB, kèm client Android CyberHUD độc lập.",
     repoPath: "d:\\PROJECTS\\detect-face",
+    githubUrl: "https://github.com/VuongQuocHoa/detect-face",
+    demoGuide: "FastAPI Swagger Docs (http://localhost:8000/docs) | File APK cài đặt: dist/FaceID_CyberHUD.apk",
     tags: ["FastAPI", "InsightFace Buffalo_l", "ChromaDB", "Cosine Similarity", "Android APK", "OpenVINO", "PWA WebAPK"],
     specs: {
       "Mô hình": "InsightFace Buffalo_l (Face Detection + 512D Embedding)",
       "Cơ sở dữ liệu Vector": "ChromaDB Persistent Collection (Cosine Distance)",
       "Kiến trúc giao tiếp": "FastAPI RESTful Endpoints (Multipart upload)",
       "Nền tảng Client": "Android APK độc lập & Giao diện PWA WebAPK",
-      "Thuật toán ổn định": "Anti-ghosting motion filter & Stranger pinning tracking"
+      "Thuật toán ổn định": "Anti-ghosting motion filter & Stranger pinning tracking",
+      "Demo khả dụng": "FastAPI Swagger UI & Android CyberHUD APK"
     },
     diagram:
-      `[Android Phone / Webcam Client]
+`[Android Phone / Webcam Client]
        │ (Stream frames qua HTTP Multipart / WebSocket)
        ▼
 [FastAPI Gateway (Uvicorn / OpenVINO)]
@@ -86,16 +92,18 @@ const projectsData = [
     metricPill: "Full-Stack React + Prisma • Chuẩn VietGAP • B2B Dashboard",
     shortDesc: "Hệ thống ERP số hóa vùng nguyên liệu cho Hợp tác xã (HTX) và đội sản xuất: quản lý hộ nông dân, nhật ký phân bón/thuốc bảo vệ thực vật, theo dõi chu kỳ mùa vụ và dashboard dự báo sản lượng cho siêu thị.",
     repoPath: "d:\\PROJECTS\\mobiagri-app",
+    githubUrl: "https://github.com/VuongQuocHoa/mobiagri-app",
+    demoGuide: "React 18 + Vite Farm ERP (http://localhost:5173) & Express RESTful API Backend",
     tags: ["React 18", "Vite", "Node.js", "Express", "Prisma ORM", "SQLite", "REST API", "Responsive CSS"],
     specs: {
       "Kiến trúc Frontend": "React 18 + Vite, Component-driven, CSS Variables",
       "Backend": "Node.js Express RESTful Architecture",
       "Quản trị CSDL": "Prisma ORM với mô hình quan hệ chặt chẽ",
       "Tính năng cốt lõi": "Nhật ký canh tác, Dự báo sản lượng, Quản lý kho",
-      "Đối tượng sử dụng": "Hợp tác xã nông nghiệp, Nông dân, Thương lái & Siêu thị"
+      "Demo khả dụng": "Giao diện quản trị HTX & Xã viên thời gian thực"
     },
     diagram:
-      `[Nông dân / HTX / Siêu thị]
+`[Nông dân / HTX / Siêu thị]
        │ (Giao diện React / Vite tương tác tức thời)
        ▼
 [Express.js RESTful API Controller]
@@ -121,16 +129,19 @@ const projectsData = [
     metricPill: "Voice-to-Text • Coze API v3 Streaming (SSE) • Google Sheets Sync",
     shortDesc: "Hệ thống mô phỏng thiết bị đeo IoT thu âm giọng nói tiếng Việt tự nhiên của nông dân ngoài đồng, tự động trích xuất thực thể canh tác có cấu trúc bằng Coze LLM và đồng bộ Google Sheets.",
     repoPath: "d:\\PROJECTS\\coze-agent",
+    githubUrl: "https://github.com/VuongQuocHoa/coze-agent",
+    demoGuide: "Mô phỏng thu âm giọng nói (mophong.py) & Coze API v3 SSE Stream",
     tags: ["Coze API v3", "LLM Streaming SSE", "Python", "Speech-to-Text", "Google Sheets API", "IoT Simulation"],
     specs: {
       "Mô hình AI": "ByteDance Coze Bot API v3 (Streaming Mode)",
       "Đầu vào": "Giọng nói tiếng Việt tự nhiên (Speech Audio Stream)",
       "Đầu ra cấu trúc": "JSON Schema: [Thửa đất, Loại phân bón, Liều lượng, Thời gian]",
       "Tích hợp tự động": "Webhook đồng bộ bảng tính Google Sheets thời gian thực",
-      "Độ trễ": "Phản hồi dòng chảy (Server-Sent Events) tức thì"
+      "Độ trễ": "Phản hồi dòng chảy (Server-Sent Events) tức thì",
+      "Demo khả dụng": "Script thu âm giọng nói & Webhook sync Google Sheets"
     },
     diagram:
-      `[Giọng nói nông dân] ──> [Speech-to-Text] ──> [Python Streaming Gateway]
+`[Giọng nói nông dân] ──> [Speech-to-Text] ──> [Python Streaming Gateway]
                                                     │
                                                     ▼ (Coze API v3 SSE Stream)
                                             [Coze AI Agent Engine]
@@ -157,15 +168,18 @@ const projectsData = [
     metricPill: "100/100 Lighthouse • 0 External Dependencies • Pure ES6 Modules",
     shortDesc: "Ứng dụng web trực quan hóa 1.440 phút trong ngày theo vòng tròn năng lượng 24h, tích hợp cảm biến trình duyệt, thuật toán phân bổ góc Canvas/SVG và chatbot quy tắc nội bộ không độ trễ.",
     repoPath: "d:\\PROJECTS\\follow",
+    githubUrl: "https://github.com/VuongQuocHoa/chronos-life-os",
+    demoGuide: "Trải nghiệm trực tiếp trên trình duyệt: http://localhost:8080 (100/100 Lighthouse)",
     tags: ["Vanilla JS (ES6 Modules)", "HTML5 Canvas/SVG", "CSS Glassmorphism", "Browser Sensors", "Rule Engine", "Node.js"],
     specs: {
       "Công nghệ": "Pure JavaScript ES6 Modules (Không framework cồng kềnh)",
       "Hiệu năng": "60 FPS rendering, < 50KB kích thước tệp tải",
       "Bảo mật": "100% Client-side local persistence (localStorage)",
-      "Tính năng": "Native Rule Chatbot, Live Tracker, Circular Geometry Math"
+      "Tính năng": "Native Rule Chatbot, Live Tracker, Circular Geometry Math",
+      "Demo khả dụng": "Giao diện Web 24h Circular Life OS chạy tức thì"
     },
     diagram:
-      `[Browser Sensors & Time Engine] ──> [Chronos Core State Manager]
+`[Browser Sensors & Time Engine] ──> [Chronos Core State Manager]
                                              │
                        ┌─────────────────────┼─────────────────────┐
                        ▼                     ▼                     ▼
@@ -186,15 +200,18 @@ const projectsData = [
     metricPill: "Realtime Telegram Alert • Deal Scoring Engine • Anti Rate-Limit",
     shortDesc: "Bot cào dữ liệu đa luồng quét sản phẩm Flash Sale trên sàn TMĐT Shopee, áp dụng thuật toán chấm điểm deal hời và bắn cảnh báo tức thời về điện thoại qua Telegram Webhook.",
     repoPath: "d:\\PROJECTS\\shopee-deal-sniper",
+    githubUrl: "https://github.com/VuongQuocHoa/shopee-deal-sniper",
+    demoGuide: "Giao diện giám sát Deal thời gian thực (http://localhost:3000) & Bot Telegram Alert",
     tags: ["Node.js", "Express", "Telegram Bot API", "Web Scraping", "Data Filtering", "Anti Rate-limit"],
     specs: {
       "Thuật toán": "filterAndScoreItems (Đánh giá chiết khấu, uy tín shop)",
       "Cơ chế tránh khóa IP": "Adaptive polling & Ring buffer ID de-duplication",
       "Hệ thống thông báo": "Telegram Bot Webhook gửi kèm ảnh, giá gốc & giá sale",
-      "Kiểm soát bộ nhớ": "Buffer vòng tròn 100 deals bảo vệ RAM"
+      "Kiểm soát bộ nhớ": "Buffer vòng tròn 100 deals bảo vệ RAM",
+      "Demo khả dụng": "Web Dashboard kiểm soát & Bot Telegram thời gian thực"
     },
     diagram:
-      `[Shopee API / Web Endpoints] ──> [Scraper Module] ──> [Filter & Scoring Engine]
+`[Shopee API / Web Endpoints] ──> [Scraper Module] ──> [Filter & Scoring Engine]
                                                               │
                                       ┌───────────────────────┴───────────────────────┐
                                       ▼                                               ▼
@@ -214,15 +231,18 @@ const projectsData = [
     metricPill: "Google Gemini 1.5 Flash • Auto Lead Collection • 24/7 Operations",
     shortDesc: "Trợ lý bán hàng thông minh tích hợp Facebook Messenger qua Graph API, sử dụng Google Gemini 1.5 Flash để tự động tư vấn sản phẩm, thấu hiểu ngữ cảnh và thu thập số điện thoại đặt hàng.",
     repoPath: "d:\\PROJECTS\\fb-ai-bot",
+    githubUrl: "https://github.com/VuongQuocHoa/fb-ai-bot",
+    demoGuide: "Messenger Graph Webhook & Giao diện Live Transaction Logger: http://localhost:3000",
     tags: ["Node.js", "Google Gemini API", "Facebook Graph API", "Webhooks", "Live Logging", "Prompt Engineering"],
     specs: {
       "Mô hình": "Google Gemini 1.5 Flash",
       "Giao tiếp": "Facebook Messenger Graph API Webhook",
       "Mục tiêu": "Tự động tư vấn & Thu thập Lead (Tên + Số điện thoại)",
-      "Giám sát": "Live Transaction Logging Dashboard"
+      "Giám sát": "Live Transaction Logging Dashboard",
+      "Demo khả dụng": "Giao diện mô phỏng hội thoại Messenger & Giám sát Live Logs"
     },
     diagram:
-      `[Khách hàng nhắn tin Messenger] ──> [Node.js Express Webhook] ──> [Google Gemini 1.5 Flash]
+`[Khách hàng nhắn tin Messenger] ──> [Node.js Express Webhook] ──> [Google Gemini 1.5 Flash]
                                                                             │
                                                                             ▼
                                                                 [Phản hồi khách hàng < 1.5s]
@@ -242,15 +262,18 @@ const projectsData = [
     metricPill: "LangChain • RSS Web Scraping • APScheduler",
     shortDesc: "Agent AI tự động cào tin tức tài chính thị trường từ các nguồn RSS, sử dụng LangChain và OpenAI để trích xuất các ý chính và tự động phát bản tin lên Telegram.",
     repoPath: "d:\\PROJECTS\\d-fake",
+    githubUrl: "https://github.com/VuongQuocHoa/ai-market-agent",
+    demoGuide: "LangChain RSS Pipeline & Kênh phát tin Telegram tự động (python main.py)",
     tags: ["Python", "LangChain", "OpenAI", "BeautifulSoup4", "Feedparser", "APScheduler", "Telegram Bot"],
     specs: {
       "Khung Agent": "LangChain Summarization Chain",
       "Lập lịch tác vụ": "APScheduler định kỳ tự động",
       "Trích xuất": "Feedparser (RSS) + BeautifulSoup4 HTML parser",
-      "Kênh phát hành": "Telegram Channel / Group Bot Dispatcher"
+      "Kênh phát hành": "Telegram Channel / Group Bot Dispatcher",
+      "Demo khả dụng": "Kịch bản cào tin tức & Tóm tắt phát sóng Telegram"
     },
     diagram:
-      `[Financial News RSS / Web] ──> [Feedparser & BeautifulSoup4] ──> [LangChain Agent] ──> [Telegram Dispatcher]`,
+`[Financial News RSS / Web] ──> [Feedparser & BeautifulSoup4] ──> [LangChain Agent] ──> [Telegram Dispatcher]`,
     star: {
       situation: "Khối lượng tin tức tài chính mỗi ngày quá lớn, gây quá tải thông tin và mất nhiều giờ để chắt lọc biến động quan trọng.",
       task: "Tự động hóa quy trình thu thập tin, tóm tắt theo gạch đầu dòng chiến lược và gửi bản tin mỗi sáng.",
@@ -294,6 +317,12 @@ function renderProjects(projects) {
 
       <p class="proj-summary">${p.shortDesc}</p>
 
+      <!-- Demo Info Strip -->
+      <div style="background: rgba(56, 189, 248, 0.05); border: 1px dashed rgba(56, 189, 248, 0.25); padding: 0.45rem 0.75rem; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+        <span style="color: var(--text-accent); font-weight: 700;">▶ DEMO / TRẢI NGHIỆM:</span>
+        <span style="color: #cbd5e1; font-family: var(--font-mono);">${p.demoGuide}</span>
+      </div>
+
       <ul class="star-bullets">
         <li class="star-bullet-item">
           <span class="star-tag tag-s">BỐI CẢNH</span>
@@ -314,6 +343,10 @@ function renderProjects(projects) {
           ${p.tags.map(t => `<span class="tech-tag-sm">${t}</span>`).join("")}
         </div>
         <div class="proj-actions no-print">
+          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;" title="Xem mã nguồn trên GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>GitHub</span>
+          </a>
           <button class="btn btn-primary" onclick="openProjectModal('${p.id}')">
             <span>Chi tiết &amp; Sơ đồ</span>
           </button>
@@ -352,7 +385,7 @@ function applyFilterAndSearch() {
 
   const filtered = projectsData.filter(p => {
     const matchCategory = (currentFilter === "all") || (p.category === currentFilter);
-    const matchQuery = !query ||
+    const matchQuery = !query || 
       p.title.toLowerCase().includes(query) ||
       p.shortDesc.toLowerCase().includes(query) ||
       p.tags.some(t => t.toLowerCase().includes(query));
@@ -394,6 +427,15 @@ function openProjectModal(id) {
         ${p.shortDesc}
       </div>
 
+      <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1.25rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; font-weight: 700; font-family: var(--font-mono);">
+          ▶ Hướng dẫn chạy thử Demo:
+        </div>
+        <div style="font-size: 0.875rem; color: #ffffff; margin-top: 0.25rem; font-family: var(--font-mono);">
+          ${p.demoGuide}
+        </div>
+      </div>
+
       <h4 style="font-size: 0.95rem; color: #38bdf8; margin: 1rem 0 0.5rem; text-transform: uppercase; font-family: var(--font-mono);">
         📐 Thông Số Kỹ Thuật (Technical Specs)
       </h4>
@@ -412,12 +454,14 @@ function openProjectModal(id) {
       <pre class="diagram-block">${p.diagram}</pre>
 
       <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <span style="font-family: var(--font-mono); font-size: 0.775rem; color: #6b7280;">
-          📁 Local Repo: <code>${p.repoPath}</code>
-        </span>
-        <button class="btn btn-primary" onclick="copyPath('${p.repoPath}')">
-          Sao chép đường dẫn
-        </button>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;">
+            Xem GitHub Repository ↗
+          </a>
+          <button class="btn btn-primary" onclick="copyPath('${p.repoPath}')">
+            Sao chép đường dẫn cục bộ
+          </button>
+        </div>
       </div>
     `;
   }
