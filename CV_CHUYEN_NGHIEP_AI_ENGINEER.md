@@ -34,7 +34,20 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ## 🚀 03. KINH NGHIỆM THỰC CHIẾN & DỰ ÁN KỸ THUẬT (FEATURED PROJECTS)
 
-### 1. Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI Học Máy
+### 1. Lockheed DACS — Xưởng Lắp Ráp & Đánh Chặn Tên Lửa 3D (WebGL / Three.js)
+*Vai trò: Lead 3D Simulation Engineer • Công nghệ: Three.js (WebGL), Pointer Lock API, WebAudio API, Physics Modeling*
+- **GitHub Repository:** [https://github.com/VuongQuocHoa/lockheed-dacs](https://github.com/VuongQuocHoa/lockheed-dacs)
+- **Trải nghiệm Demo:** Chạy trực tiếp trình duyệt (`http://localhost:8088`) hoặc nhấp đúp file `index.html`.
+- **Bối cảnh (Situation):** Khi tên lửa bay ở tốc độ siêu thanh (Mach 3 - Mach 5), cánh lái khí động học truyền thống bị suy giảm hiệu lực lớn do sóng xung kích, khiến việc đánh chặn mục tiêu cơ động cao bị sai lệch.
+- **Giải pháp (Action):**
+  - Xây dựng hệ thống mô phỏng 3D thời gian thực bằng **Three.js (WebGL)**, mô hình hóa động học bay 6 bậc tự do (6-DOF) và định luật dẫn đường tỷ lệ (Proportional Navigation).
+  - Lập trình hệ thống điều hướng xung lực ngang **Lockheed Martin DACS** với 4 vòi xả khí $O_2$ vuông góc trục thân, bẻ góc mũi tên lửa tức thời không có độ trễ cơ học.
+  - Tích hợp Pointer Lock API cho cơ chế điều khiển góc nhìn thứ 3 (TPS PUBG/Free Fire), hiệu ứng làm chậm thời gian Bullet-Time (0.2x speed) và bộ tổng hợp âm thanh thủ tục WebAudio API (zero-mp3).
+- **Kết quả (Result):** Vận hành mượt mà 60 FPS trên mọi trình duyệt, đánh chặn chính xác mục tiêu di động (UAV siêu thanh, tên lửa hành trình), mang lại trải nghiệm thị giác và kỹ thuật ấn tượng.
+
+---
+
+### 2. Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI Học Máy
 *Vai trò: Lead AI Engineer • Công nghệ: YOLOv11n-seg, OpenCV, ONNX Runtime INT8, OpenVINO, Python*
 - **GitHub Repository:** [https://github.com/VuongQuocHoa/predict-mass](https://github.com/VuongQuocHoa/predict-mass)
 - **Trải nghiệm Demo:** Giao diện Streamlit (`http://localhost:8501`) & Luồng camera 60 FPS (`python run_camera.py`).

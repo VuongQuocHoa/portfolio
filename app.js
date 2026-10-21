@@ -6,6 +6,43 @@
 
 const projectsData = [
   {
+    id: "lockheed-dacs",
+    title: "Lockheed DACS — Xưởng Lắp Ráp Tên Lửa & Đánh Chặn 3D (WebGL / Three.js)",
+    role: "Lead 3D Simulation Engineer",
+    category: "simulation",
+    metricPill: "Three.js WebGL • 60 FPS • DACS O2 Divert • WebAudio",
+    shortDesc: "Hệ thống mô phỏng 3D khí động học thời gian thực: Tự tay lắp ráp 6 mô-đun tên lửa, mô phỏng xung lực khí nén ngang Lockheed Martin DACS, điều khiển góc nhìn thứ ba TPS (Pointer Lock) và làm chậm thời gian Bullet-Time.",
+    repoPath: "d:\\PROJECTS\\lockheed-dacs",
+    githubUrl: "https://github.com/VuongQuocHoa/lockheed-dacs",
+    demoGuide: "Chạy trực tiếp: http://localhost:8088 hoặc nhấp đúp file index.html",
+    tags: ["Three.js (r128)", "WebGL", "Pointer Lock API", "WebAudio API", "Proportional Navigation", "Physics Engine", "JavaScript ES6"],
+    specs: {
+      "Đồ họa & Dựng hình": "Three.js r128 (Shaders, PBR Materials, Particle Fog)",
+      "Vật lý dẫn đường": "Định luật dẫn đường tỷ lệ (Proportional Navigation)",
+      "Hệ thống DACS": "Vòng 8 vòi phun O₂ áp suất cao bẻ hướng ngang tức thời",
+      "Góc nhìn Camera": "4 Chế độ: TPS PUBG/Free Fire, FPV Seeker HUD, Orbit 360°, Side",
+      "Âm thanh": "WebAudio procedural audio (không dùng file mp3 ngoài)"
+    },
+    diagram: 
+`[User Mouse / Keyboard (TPS Look / WASD)]
+       │ (Pointer Lock API + Bullet-Time Time Dilation)
+       ▼
+[Three.js Simulation Loop (60 FPS)]
+       │
+       ├──> Modular Assembly Manager (6 Mô-đun: Nozzle, Fins, Fuselage, Strakes, DACS, Nose)
+       ├──> Lockheed DACS Lateral Jet Controller (Xả khí O₂ vuông góc thân)
+       ├──> Proportional Navigation Guidance Law (Bám đuổi mục tiêu di động UAV / Cruise)
+       │
+       ▼
+[AI Seeker Canvas HUD + WebAudio Sound Synthesizer]`,
+    star: {
+      situation: "Khi tên lửa bay ở tốc độ siêu thanh (Mach 3 - Mach 5), cánh lái cơ học truyền thống bị giảm sút hiệu lực nghiêm trọng do sóng xung kích, khiến việc đánh chặn mục tiêu di động cơ động cao gặp sai số lớn.",
+      task: "Mô phỏng 3D chính xác cơ chế hoạt động của hệ thống xung lực ngang Lockheed Martin DACS (Divert and Attitude Control System) trên trình duyệt web ở tốc độ 60 FPS mượt mà.",
+      action: "Lập trình bằng Three.js thuần kết hợp thuật toán tính góc hình học 6 bậc tự do (6-DOF); thiết kế 4 vòi phun khí O₂ vuông góc bẻ góc tức thời; tích hợp Pointer Lock API cho phép điều khiển TPS như game PUBG/Free Fire và tổng hợp âm thanh thủ tục bằng WebAudio API.",
+      result: "Hệ thống vận hành mượt mà 60 FPS trên mọi trình duyệt mà không cần cài đặt plugin, đánh chặn mục tiêu chính xác với độ trễ phản hồi tức thời."
+    }
+  },
+  {
     id: "predict-mass",
     title: "Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI",
     role: "Lead AI Engineer",
