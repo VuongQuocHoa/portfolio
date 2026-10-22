@@ -138,18 +138,7 @@ Kỹ sư phần mềm tập trung vào **Ứng dụng AI thực chiến (Applied
 
 ---
 
-## 🎯 04. GÓC PHỎNG VẤN KỸ THUẬT (INTERVIEW QUESTIONS PREP)
-
-- **Q: Cách bạn giải quyết triệt để nghẽn cổ chai (bottleneck) khi suy luận AI trên luồng video thời gian thực?**
-  - *Trả lời:* Sử dụng kiến trúc **Decoupled Asynchronous Pipeline**. Tách luồng Camera Grabber (60 FPS) độc lập khỏi luồng AI Inference (35 FPS) qua bộ nhớ đệm vòng tròn (Ring buffer). Luồng AI luôn lấy khung hình mới nhất và bỏ qua khung hình cũ, triệt tiêu hoàn toàn độ trễ tích lũy và duy trì 60 FPS mượt mà cho mắt người dùng.
-- **Q: Lợi thế của việc lượng tử hóa INT8 PTQ trên thiết bị nhúng là gì?**
-  - *Trả lời:* Giảm 50% kích thước mô hình, tiết kiệm băng thông nhớ và điện năng. Khi kết hợp với OpenVINO Execution Provider, các phép toán ma trận được ánh xạ vào tập lệnh SIMD đa luồng, tăng tốc độ suy luận gấp 1.8 lần mà độ chính xác gần như không suy giảm.
-- **Q: Làm sao để kiểm soát tính chính xác của LLM khi tích hợp vào quy trình thực tế?**
-  - *Trả lời:* Áp dụng Structured Outputs với JSON Schema định sẵn, thiết kế System Prompt ràng buộc vai trò chặt chẽ (Guardrails), sử dụng cơ chế Streaming SSE để giảm tối đa Time-to-First-Token và tích hợp cơ chế xác nhận lại với người dùng trước khi ghi vào CSDL.
-
----
-
-## 🎓 05. HỌC VẤN & THÔNG TIN BỔ SUNG (EDUCATION & DETAILS)
+## 🎓 04. HỌC VẤN & THÔNG TIN BỔ SUNG (EDUCATION & DETAILS)
 
 - **Chuyên ngành:** Công nghệ Thông tin / Kỹ thuật Phần mềm (Software Engineering / Computer Science)
 - **Hình thức làm việc mong muốn:** Full-time (On-site / Hybrid / Remote)

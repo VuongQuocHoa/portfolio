@@ -48,7 +48,6 @@
           <li><a href="#summary">Summary</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Projects</a></li>
-          <li><a href="#interview">Technical Q&amp;A</a></li>
           <li><a href="#education">Education</a></li>
         </ul>
       </nav>
@@ -234,52 +233,11 @@
       </div>
     </section>
 
-    <!-- SECTION 4: TECHNICAL INTERVIEW PREPARATION (STAR HIGHLIGHTS) -->
-    <section class="section" id="interview">
-      <div class="section-head">
-        <h2 class="section-title">
-          <span>04.</span> TECHNICAL INTERVIEW HIGHLIGHTS (ARCHITECTURAL DEEP-DIVE)
-        </h2>
-      </div>
-
-      <div class="interview-deck">
-        <div class="interview-item">
-          <div class="interview-q">
-            <span>Q1:</span>
-            <span>How do you eliminate latency bottlenecks when executing real-time AI vision inference on high-frame-rate video feeds?</span>
-          </div>
-          <div class="interview-a">
-            <strong>Architecture Solution:</strong> In the <em>Edge AI Predict Mass</em> project, the industrial camera captured at 60 FPS (~16.6ms per frame) while the segmentation neural network required ~28ms. A naive synchronous approach led to ballooning frame queues and crippling UI lag. I architected a <strong>Decoupled Asynchronous Multi-threaded Pipeline</strong>: an independent high-priority Camera Grabber thread pushes the freshest frame into a non-blocking circular buffer, while a parallel Inference Worker thread processes strictly the latest frame, cleanly dropping stale intermediates. Parallelizing ArUco marker pose estimation with deep segmentation eliminated 100% of accumulated latency, achieving a buttery-smooth <strong>60 FPS display with sub-17ms latency</strong>.
-          </div>
-        </div>
-
-        <div class="interview-item">
-          <div class="interview-q">
-            <span>Q2:</span>
-            <span>What was your strategy for Model Quantization and running edge inference on resource-constrained hardware?</span>
-          </div>
-          <div class="interview-a">
-            <strong>Architecture Solution:</strong> To deploy computer vision models on embedded CPU hardware without requiring power-hungry dedicated GPUs, I designed an automated <strong>Post-Training Quantization (PTQ)</strong> workflow using ONNX Runtime. By calibrating weight matrices and activation ranges against representative domain samples, FP32 floating-point values were mapped to 8-bit integers (INT8). This shrank model memory footprint by <strong>50% (down to 6.2 MB)</strong>, halved memory bus bandwidth consumption, and unlocked a <strong>1.8x inference speedup</strong> by capitalizing on OpenVINO SIMD vector extensions.
-          </div>
-        </div>
-
-        <div class="interview-item">
-          <div class="interview-q">
-            <span>Q3:</span>
-            <span>How do you architect robust LLM / Generative AI streaming integrations for production web clients?</span>
-          </div>
-          <div class="interview-a">
-            <strong>Architecture Solution:</strong> Connecting frontend clients directly to third-party LLM endpoints triggers critical CORS violations and leaks secret API tokens. In the <em>Coze AI Agent</em> system, I engineered a zero-dependency native Node.js reverse proxy and Vercel Serverless Edge handler. To handle Server-Sent Events (SSE) streaming seamlessly, I implemented an inline <strong>Deduplication Stream Parser</strong> that resolves duplicate text tokens between <code>conversation.message.delta</code> and <code>completed</code> events while stripping internal system OAuth artifacts. This guaranteed sub-150ms time-to-first-byte (TTFB) and real-time typewriter typography without flickering.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: EDUCATION & CORE PRINCIPLES -->
+    <!-- SECTION 4: EDUCATION & CORE PRINCIPLES -->
     <section class="section" id="education">
       <div class="section-head">
         <h2 class="section-title">
-          <span>05.</span> EDUCATION &amp; ENGINEERING PRINCIPLES
+          <span>04.</span> EDUCATION &amp; ENGINEERING PRINCIPLES
         </h2>
       </div>
 
