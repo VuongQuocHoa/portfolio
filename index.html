@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV & Hồ Sơ Năng Lực Kỹ Sư — Vương Quốc Hòa | AI & Full-Stack Engineer</title>
+  <title>Vuong Quoc Hoa — AI & Full-Stack Software Engineer | Portfolio & Resume</title>
 
   <!-- SEO & Professional Metadata -->
   <meta name="description"
-    content="Hồ sơ năng lực kỹ sư phần mềm Vương Quốc Hòa - Chuyên sâu Edge AI, Computer Vision (YOLOv11, InsightFace), AI Agents (Coze, Gemini), và Full-Stack Web Architecture.">
+    content="Professional portfolio of Vuong Quoc Hoa - Junior AI, Computer Vision (YOLOv11, InsightFace), Model Quantization (INT8 PTQ), 3D WebGL Simulation (Three.js), and Full-Stack Systems Engineer. Available for global remote roles.">
   <meta name="keywords"
-    content="Vuong Quoc Hoa, AI Engineer, Computer Vision, Edge AI, Full-Stack, YOLOv11, FastAPI, ChromaDB, Coze, React">
-  <meta name="author" content="Vương Quốc Hòa">
+    content="Vuong Quoc Hoa, AI Engineer, Computer Vision Engineer, Edge AI, Model Optimization, INT8 Quantization, YOLOv11, InsightFace, FastAPI, ChromaDB, Three.js, React, Full-Stack Developer">
+  <meta name="author" content="Vuong Quoc Hoa">
+
+  <!-- Open Graph for LinkedIn / Twitter sharing -->
+  <meta property="og:title" content="Vuong Quoc Hoa — AI & Full-Stack Software Engineer">
+  <meta property="og:description" content="Applied AI, Computer Vision, Real-Time Systems, and 3D WebGL Simulation. Explore interactive live demos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vuongquochoa.github.io/portfolio/">
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,29 +37,30 @@
       <a href="#profile" class="nav-profile">
         <div class="avatar-badge">VQH</div>
         <div class="nav-title-group">
-          <h1>VƯƠNG QUỐC HÒA</h1>
-          <p>AI &amp; FULL-STACK ENGINEER</p>
+          <h1>VUONG QUOC HOA</h1>
+          <p>AI &amp; FULL-STACK SYSTEMS ENGINEER</p>
         </div>
       </a>
 
       <nav>
         <ul class="nav-links">
-          <li><a href="#profile">Hồ sơ HR</a></li>
-          <li><a href="#summary">Tóm tắt</a></li>
-          <li><a href="#skills">Kỹ năng</a></li>
-          <li><a href="#experience">Dự án thực chiến</a></li>
-          <li><a href="#interview">Góc phỏng vấn</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Projects</a></li>
+          <li><a href="#interview">Technical Q&amp;A</a></li>
+          <li><a href="#education">Education</a></li>
         </ul>
       </nav>
 
       <div class="nav-buttons">
-        <button class="btn btn-primary" onclick="window.print()" title="Xuất file PDF hoặc in hồ sơ chuẩn A4">
+        <button class="btn btn-primary" onclick="window.print()" title="Export standard ATS A4 PDF Resume">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
             <rect x="6" y="14" width="12" height="8"></rect>
           </svg>
-          <span>Xuất PDF / In CV</span>
+          <span>Export PDF / Print</span>
         </button>
       </div>
     </div>
@@ -61,54 +68,55 @@
 
   <main class="container">
 
-    <!-- MASTER PROFILE CARD FOR HR DATA ENTRY -->
+    <!-- MASTER PROFILE CARD FOR RECRUITERS & ATS PARSING -->
     <section class="cv-header-card" id="profile">
       <div class="cv-identity-row">
         <div>
-          <h2 class="candidate-name" id="candName" contenteditable="true" title="Bấm để sửa tên trực tiếp">VƯƠNG QUỐC HÒA</h2>
-          <p class="candidate-role">Applied AI &amp; Full-Stack Software Engineer</p>
+          <h2 class="candidate-name" id="candName" contenteditable="true" title="Click to edit name">VUONG QUOC HOA</h2>
+          <p class="candidate-role">Applied AI, Computer Vision &amp; Full-Stack Systems Engineer</p>
         </div>
         <div class="candidate-status-pill">
           <span class="status-dot"></span>
-          <span>Sẵn sàng tiếp nhận công việc (Full-time / On-site / Remote)</span>
+          <span>Open to Opportunities | Remote (Worldwide) • Hybrid • On-site</span>
         </div>
       </div>
 
-      <!-- Structured Data for Company ATS / HR Forms -->
+      <!-- Structured Data for ATS & Recruiter Screening -->
       <div class="hr-info-grid">
         <div class="hr-item">
-          <span class="hr-label">Email liên hệ</span>
+          <span class="hr-label">Email</span>
           <span class="hr-val badge-editable" id="candEmail" contenteditable="true"
-            title="Bấm để sửa email">hoalkasd@gmail.com</span>
+            title="Click to edit email">hoalkasd@gmail.com</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Số điện thoại / Zalo</span>
-          <span class="hr-val badge-editable" id="candPhone" contenteditable="true" title="Bấm để sửa SĐT">0399911382</span>
+          <span class="hr-label">Phone / WhatsApp / Zalo</span>
+          <span class="hr-val badge-editable" id="candPhone" contenteditable="true" title="Click to edit phone">+84 399 911 382</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Địa điểm hiện tại</span>
-          <span class="hr-val">TP. Hồ Chí Minh, Việt Nam</span>
+          <span class="hr-label">Location</span>
+          <span class="hr-val">Ho Chi Minh City, Vietnam (UTC+7)</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Vị trí ứng tuyển</span>
-          <span class="hr-val">AI / Computer Vision / Full-Stack Engineer</span>
+          <span class="hr-label">Target Roles</span>
+          <span class="hr-val">Junior AI / Computer Vision / Full-Stack Engineer</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Mã nguồn &amp; Portfolio</span>
-          <span class="hr-val badge-editable" id="candGithub" contenteditable="true"
-            title="Bấm để sửa link GitHub">github.com/VuongQuocHoa</span>
+          <span class="hr-label">GitHub Portfolio</span>
+          <span class="hr-val badge-editable" id="candGithub" contenteditable="true">
+            <a href="https://github.com/VuongQuocHoa" target="_blank" style="color:inherit; text-decoration:none;">github.com/VuongQuocHoa</a>
+          </span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Thời gian bắt đầu</span>
-          <span class="hr-val">Có thể nhận việc ngay lập tức</span>
+          <span class="hr-label">Availability</span>
+          <span class="hr-val">Immediate (Full-time / Contract)</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Kinh nghiệm thực tiễn</span>
-          <span class="hr-val">8+ Hệ thống hoàn chỉnh (Edge AI, Web, Agent)</span>
+          <span class="hr-label">Shipped Systems</span>
+          <span class="hr-val">10 Production &amp; Simulation Repositories (All with Live Demos)</span>
         </div>
         <div class="hr-item">
-          <span class="hr-label">Trình độ ngoại ngữ</span>
-          <span class="hr-val">Tiếng Anh đọc hiểu tài liệu &amp; giao tiếp kỹ thuật</span>
+          <span class="hr-label">English Proficiency</span>
+          <span class="hr-val">Professional Working Proficiency (Technical Reading &amp; Communication)</span>
         </div>
       </div>
     </section>
@@ -117,87 +125,82 @@
     <section class="section" id="summary">
       <div class="section-head">
         <h2 class="section-title">
-          <span>01.</span> TÓM TẮT NĂNG LỰC CỐT LÕI (PROFESSIONAL SUMMARY)
+          <span>01.</span> EXECUTIVE SUMMARY
         </h2>
       </div>
       <p class="summary-text">
-        Kỹ sư phần mềm tập trung vào <strong>Ứng dụng AI thực chiến (Applied AI)</strong>, <strong>Thị giác máy tính
-          (Computer Vision)</strong> và <strong>Kiến trúc hệ thống Full-Stack</strong>. Có năng lực làm chủ trọn vẹn
-        vòng đời sản phẩm: từ nghiên cứu thuật toán, tiền xử lý quang học phối cảnh, lượng tử hóa mô hình <strong>(INT8
-          PTQ, OpenVINO)</strong> chạy ổn định trên phần cứng biên với pipeline bất đồng bộ <strong>60 FPS
-          zero-lag</strong>, đến xây dựng microservice phân tán <strong>(FastAPI, ChromaDB Vector DB)</strong> và nền
-        tảng người dùng cuối <strong>(React, Node.js, Android APK)</strong>. Tư duy kỹ thuật nhất quán: tối ưu hiệu năng
-        tối đa, giải quyết triệt để bài toán kinh doanh và thiết kế mã nguồn chuẩn hóa, dễ mở rộng.
+        High-agency Software Engineer specializing in <strong>Applied AI</strong>, <strong>Edge Computer Vision</strong>, and <strong>High-Performance Full-Stack Systems</strong>. Proven track record of owning the entire engineering lifecycle: from mathematical formulation, optical perspective rectification, and model quantization (<strong>INT8 PTQ via ONNX Runtime &amp; OpenVINO</strong>) delivering <strong>60 FPS zero-lag async vision pipelines</strong>, to architecting low-latency microservices (<strong>FastAPI, ChromaDB Vector DB</strong>), interactive 3D WebGL simulations (<strong>Three.js</strong>), and production-ready web apps (<strong>React 18, Node.js</strong>). Known for relentless performance optimization, metric-driven problem solving, and zero-bloat, production-tested codebases.
       </p>
     </section>
 
-    <!-- SECTION 2: TECHNICAL COMPETENCY MATRIX -->
+    <!-- SECTION 2: TECHNICAL COMPETENCIES -->
     <section class="section" id="skills">
       <div class="section-head">
         <h2 class="section-title">
-          <span>02.</span> BẢNG NĂNG LỰC KỸ THUẬT (TECHNICAL COMPETENCIES)
+          <span>02.</span> TECHNICAL COMPETENCIES
         </h2>
       </div>
 
       <div class="skills-table-wrap">
         <div class="skill-row">
-          <div class="skill-cat">Edge AI &amp; Computer Vision</div>
+          <div class="skill-cat">Computer Vision &amp; Edge AI</div>
           <div class="skill-items">
             <span class="skill-chip">YOLOv11n-seg</span>
-            <span class="skill-chip">InsightFace Buffalo_l</span>
+            <span class="skill-chip">InsightFace (Buffalo_l)</span>
             <span class="skill-chip">OpenCV</span>
-            <span class="skill-chip">ArUco Marker PPM</span>
+            <span class="skill-chip">ArUco Marker PPM Calibration</span>
             <span class="skill-chip">Perspective Depth Geometry</span>
-            <span class="skill-chip">Ellipse Fitting</span>
+            <span class="skill-chip">Ellipse Fitting &amp; 3D Volume</span>
             <span class="skill-chip">MLP Mass Regressor</span>
           </div>
         </div>
 
         <div class="skill-row">
-          <div class="skill-cat">Tối ưu hóa &amp; Tăng tốc</div>
+          <div class="skill-cat">Optimization &amp; High-Throughput</div>
           <div class="skill-items">
             <span class="skill-chip">ONNX Runtime</span>
             <span class="skill-chip">Post-Training Quantization (INT8 PTQ)</span>
             <span class="skill-chip">OpenVINO Execution Provider</span>
-            <span class="skill-chip">TensorRT</span>
-            <span class="skill-chip">Decoupled Camera Grabber (60 FPS)</span>
-            <span class="skill-chip">Anti-Ghosting Motion Filter</span>
+            <span class="skill-chip">Decoupled Async Pipeline (60 FPS)</span>
+            <span class="skill-chip">Anti-Ghosting Motion Tracking</span>
+            <span class="skill-chip">Memory Circular Buffers</span>
           </div>
         </div>
 
         <div class="skill-row">
-          <div class="skill-cat">GenAI &amp; Autonomous Agents</div>
+          <div class="skill-cat">Generative AI &amp; Agent Systems</div>
           <div class="skill-items">
             <span class="skill-chip">ByteDance Coze API v3 (SSE Streaming)</span>
             <span class="skill-chip">Google Gemini 1.5 Flash</span>
             <span class="skill-chip">LangChain</span>
             <span class="skill-chip">ChromaDB Vector DB</span>
-            <span class="skill-chip">Speech-to-Text Integration</span>
             <span class="skill-chip">Structured Prompt Engineering</span>
+            <span class="skill-chip">SSE Deduplication Engine</span>
           </div>
         </div>
 
         <div class="skill-row">
-          <div class="skill-cat">Backend &amp; Microservices</div>
+          <div class="skill-cat">Backend &amp; Distributed Services</div>
           <div class="skill-items">
             <span class="skill-chip">Python (FastAPI, Uvicorn, Multiprocessing)</span>
-            <span class="skill-chip">Node.js (Express)</span>
+            <span class="skill-chip">Node.js (Express, Native HTTP)</span>
             <span class="skill-chip">Prisma ORM</span>
             <span class="skill-chip">SQLite / PostgreSQL</span>
-            <span class="skill-chip">RESTful API Design</span>
-            <span class="skill-chip">Webhooks &amp; SSE</span>
+            <span class="skill-chip">RESTful API Architecture</span>
+            <span class="skill-chip">Webhooks &amp; Server-Sent Events</span>
           </div>
         </div>
 
         <div class="skill-row">
-          <div class="skill-cat">Frontend, Mobile &amp; Tools</div>
+          <div class="skill-cat">Frontend, 3D WebGL &amp; Tooling</div>
           <div class="skill-items">
+            <span class="skill-chip">Three.js (r128 WebGL 3D)</span>
+            <span class="skill-chip">WebAudio Procedural Synthesizer</span>
             <span class="skill-chip">React 18 + Vite</span>
-            <span class="skill-chip">Vanilla JS (ES6 Modules thuần)</span>
+            <span class="skill-chip">Vanilla JS (Pure ES6 Modules, 100/100 Lighthouse)</span>
             <span class="skill-chip">HTML5 Canvas / SVG</span>
-            <span class="skill-chip">Đóng gói Android APK (CyberHUD)</span>
-            <span class="skill-chip">Puppeteer / Cheerio / BeautifulSoup</span>
-            <span class="skill-chip">Git / CI-CD</span>
+            <span class="skill-chip">Android APK Packaging</span>
+            <span class="skill-chip">Git / CI-CD / GitHub Pages</span>
           </div>
         </div>
       </div>
@@ -207,22 +210,22 @@
     <section class="section" id="experience">
       <div class="section-head">
         <h2 class="section-title">
-          <span>03.</span> KINH NGHIỆM THỰC CHIẾN &amp; DỰ ÁN KỸ THUẬT TIÊU BIỂU (PROJECTS)
+          <span>03.</span> FEATURED ENGINEERING PROJECTS
         </h2>
-        <span class="section-count no-print">9 Dự án</span>
+        <span class="section-count no-print">9 Flagship Projects</span>
       </div>
 
       <!-- Filter Controls (Screen only) -->
       <div class="filter-bar no-print">
         <div class="filter-group">
-          <button class="filter-btn active" data-filter="all">Tất cả (9)</button>
+          <button class="filter-btn active" data-filter="all">All (9)</button>
           <button class="filter-btn" data-filter="simulation">3D &amp; Simulation</button>
           <button class="filter-btn" data-filter="vision">Edge AI &amp; Vision</button>
           <button class="filter-btn" data-filter="agent">AI Agents &amp; GenAI</button>
           <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Web</button>
           <button class="filter-btn" data-filter="automation">Automation</button>
         </div>
-        <input type="text" id="projectSearch" class="search-box" placeholder="Lọc nhanh: Three.js, DACS, YOLO, FastAPI, React...">
+        <input type="text" id="projectSearch" class="search-box" placeholder="Filter by keyword: Three.js, YOLO, INT8, FastAPI, React...">
       </div>
 
       <!-- Clean Project Cards Container -->
@@ -235,7 +238,7 @@
     <section class="section" id="interview">
       <div class="section-head">
         <h2 class="section-title">
-          <span>04.</span> GÓC PHỎNG VẤN KỸ THUẬT (TECHNICAL INTERVIEW HIGHLIGHTS)
+          <span>04.</span> TECHNICAL INTERVIEW HIGHLIGHTS (ARCHITECTURAL DEEP-DIVE)
         </h2>
       </div>
 
@@ -243,74 +246,57 @@
         <div class="interview-item">
           <div class="interview-q">
             <span>Q1:</span>
-            <span>Bạn giải quyết bài toán nghẽn cổ chai (latency bottleneck) khi chạy suy luận AI trên luồng video
-              camera thời gian thực như thế nào?</span>
+            <span>How do you eliminate latency bottlenecks when executing real-time AI vision inference on high-frame-rate video feeds?</span>
           </div>
           <div class="interview-a">
-            <strong>Trả lời:</strong> Trong dự án <em>Edge AI Predict Mass</em>, camera công nghiệp ghi nhận 60 FPS
-            (~16.6ms/frame) trong khi mô hình AI phân đoạn mất ~28ms. Nếu chạy tuần tự, hàng đợi sẽ bị phình to dẫn đến
-            trễ hiển thị tích lũy. Tôi đã tách kiến trúc thành <strong>Decoupled Asynchronous Pipeline</strong>: Luồng
-            Camera Grabber chạy độc lập đẩy khung hình mới nhất vào buffer vòng tròn, còn luồng Inference Worker chạy
-            song song chỉ lấy khung hình mới nhất và bỏ qua khung hình cũ. Kết hợp song song hóa việc tìm kiếm ArUco
-            Marker và suy luận segmentation. Kết quả: triệt tiêu 100% độ trễ tích lũy, giao diện đạt 60 FPS mượt mà.
+            <strong>Architecture Solution:</strong> In the <em>Edge AI Predict Mass</em> project, the industrial camera captured at 60 FPS (~16.6ms per frame) while the segmentation neural network required ~28ms. A naive synchronous approach led to ballooning frame queues and crippling UI lag. I architected a <strong>Decoupled Asynchronous Multi-threaded Pipeline</strong>: an independent high-priority Camera Grabber thread pushes the freshest frame into a non-blocking circular buffer, while a parallel Inference Worker thread processes strictly the latest frame, cleanly dropping stale intermediates. Parallelizing ArUco marker pose estimation with deep segmentation eliminated 100% of accumulated latency, achieving a buttery-smooth <strong>60 FPS display with sub-17ms latency</strong>.
           </div>
         </div>
 
         <div class="interview-item">
           <div class="interview-q">
             <span>Q2:</span>
-            <span>Kỹ thuật lượng tử hóa (Model Quantization) đã giúp bạn tối ưu hóa tài nguyên phần cứng biên ra
-              sao?</span>
+            <span>What was your strategy for Model Quantization and running edge inference on resource-constrained hardware?</span>
           </div>
           <div class="interview-a">
-            <strong>Trả lời:</strong> Để triển khai mô hình trên chip nhúng hoặc CPU tiêu chuẩn mà không cần GPU rời đắt
-            đỏ, tôi đã áp dụng quy trình <strong>Post-Training Quantization (PTQ)</strong> bằng ONNX Runtime. Thuật toán
-            ánh xạ các ma trận trọng số từ số thực 32-bit (FP32) sang số nguyên 8-bit (INT8) dựa trên tập dữ liệu hiệu
-            chuẩn. Kết quả: dung lượng mô hình giảm gần <strong>50%</strong>, băng thông bộ nhớ tiết kiệm một nửa và
-            thời gian suy luận tăng tốc 1.8 lần nhờ tận dụng tập lệnh vector SIMD của OpenVINO Execution Provider.
+            <strong>Architecture Solution:</strong> To deploy computer vision models on embedded CPU hardware without requiring power-hungry dedicated GPUs, I designed an automated <strong>Post-Training Quantization (PTQ)</strong> workflow using ONNX Runtime. By calibrating weight matrices and activation ranges against representative domain samples, FP32 floating-point values were mapped to 8-bit integers (INT8). This shrank model memory footprint by <strong>50% (down to 6.2 MB)</strong>, halved memory bus bandwidth consumption, and unlocked a <strong>1.8x inference speedup</strong> by capitalizing on OpenVINO SIMD vector extensions.
           </div>
         </div>
 
         <div class="interview-item">
           <div class="interview-q">
             <span>Q3:</span>
-            <span>Làm thế nào để đưa Generative AI / LLM vào giải quyết bài toán thực tế cho người dùng không am hiểu
-              công nghệ?</span>
+            <span>How do you architect robust LLM / Generative AI streaming integrations for production web clients?</span>
           </div>
           <div class="interview-a">
-            <strong>Trả lời:</strong> Trong dự án <em>Edu-Farm IoT Smart Wearable</em>, nông dân trên đồng ruộng không
-            thể bấm bàn phím cảm ứng thoại để ghi chép phân bón/thuốc bảo vệ thực vật theo tiêu chuẩn VietGAP. Tôi đã
-            xây dựng pipeline thu âm giọng nói tiếng Việt tự nhiên, truyền qua <strong>ByteDance Coze API v3 bằng cơ chế
-              Server-Sent Events (SSE Streaming)</strong>. Hệ thống tự động bóc tách các trường dữ liệu có cấu trúc
-            (Loại phân bón, Thửa đất, Liều lượng) và đẩy tự động vào Google Sheets API. Tỷ lệ hoàn thành nhật ký tăng
-            lên 100% chỉ bằng 1 câu nói tự nhiên.
+            <strong>Architecture Solution:</strong> Connecting frontend clients directly to third-party LLM endpoints triggers critical CORS violations and leaks secret API tokens. In the <em>Coze AI Agent</em> system, I engineered a zero-dependency native Node.js reverse proxy and Vercel Serverless Edge handler. To handle Server-Sent Events (SSE) streaming seamlessly, I implemented an inline <strong>Deduplication Stream Parser</strong> that resolves duplicate text tokens between <code>conversation.message.delta</code> and <code>completed</code> events while stripping internal system OAuth artifacts. This guaranteed sub-150ms time-to-first-byte (TTFB) and real-time typewriter typography without flickering.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5: EDUCATION & PRINCIPLES -->
+    <!-- SECTION 5: EDUCATION & CORE PRINCIPLES -->
     <section class="section" id="education">
       <div class="section-head">
         <h2 class="section-title">
-          <span>05.</span> HỌC VẤN &amp; NGUYÊN TẮC LÀM VIỆC (EDUCATION &amp; PRINCIPLES)
+          <span>05.</span> EDUCATION &amp; ENGINEERING PRINCIPLES
         </h2>
       </div>
 
       <div class="skills-table-wrap">
         <div class="skill-row">
-          <div class="skill-cat">Học vấn &amp; Đào tạo</div>
+          <div class="skill-cat">Formal Education</div>
           <div class="skill-items">
-            <span class="skill-chip">Chuyên ngành: Công nghệ Thông tin / Kỹ thuật Phần mềm</span>
-            <span class="skill-chip">Nghiên cứu chuyên sâu: Computer Vision, Edge AI, Large Language Models</span>
+            <span class="skill-chip"><strong>Ho Chi Minh City University of Technology (HUTECH)</strong> — Bachelor of Science in Artificial Intelligence (Expected 2029)</span>
+            <span class="skill-chip">Focus Areas: Computer Vision, Deep Learning, Numerical Optimization, Edge Systems</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-cat">Nguyên tắc làm việc</div>
+          <div class="skill-cat">Engineering Philosophy</div>
           <div class="skill-items">
-            <span class="skill-chip">Đo lường bằng dữ liệu thực tế (Metrics-Driven)</span>
-            <span class="skill-chip">Mã nguồn tinh gọn, tối ưu hiệu năng (Zero-bloat)</span>
-            <span class="skill-chip">Tư duy chủ động giải quyết trọn gói bài toán (End-to-End Ownership)</span>
+            <span class="skill-chip"><strong>Metric-Driven Development:</strong> Every optimization must be benchmarked with reproducible metrics (FPS, TTFB, RAM, Latency).</span>
+            <span class="skill-chip"><strong>Zero-Bloat Architecture:</strong> Prioritize native APIs and minimal dependencies over heavy runtime frameworks whenever feasible.</span>
+            <span class="skill-chip"><strong>End-to-End Ownership:</strong> From math &amp; model weights to cloud deployment and delightful interactive UX.</span>
           </div>
         </div>
       </div>
@@ -328,7 +314,7 @@
             style="font-size: 0.825rem; color: var(--text-accent); font-family: var(--font-mono); margin-top: 0.2rem;">
           </p>
         </div>
-        <button class="modal-close" id="closeModalBtn" aria-label="Đóng">&times;</button>
+        <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
       </div>
       <div id="modalBody"></div>
     </div>

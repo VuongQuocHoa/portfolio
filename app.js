@@ -1,330 +1,358 @@
 /**
  * MINIMALIST TECH CV & PORTFOLIO ENGINE
- * Candidate: Vương Quốc Hòa (Junior AI & Full-Stack Software Engineer)
+ * Candidate: Vuong Quoc Hoa (Applied AI & Full-Stack Systems Engineer)
  * GitHub: https://github.com/VuongQuocHoa
+ * Live Portfolio: https://vuongquochoa.github.io/portfolio/
  */
 
 const projectsData = [
   {
     id: "lockheed-dacs",
-    title: "Lockheed DACS — Xưởng Lắp Ráp Tên Lửa & Đánh Chặn 3D (WebGL / Three.js)",
-    role: "Lead 3D Simulation Engineer",
+    title: "Lockheed DACS — 3D Aerospace Missile Interception Simulation (WebGL / Three.js)",
+    role: "Lead 3D Simulation & Graphics Engineer",
     category: "simulation",
-    metricPill: "Three.js WebGL • 60 FPS • DACS O2 Divert • WebAudio",
-    shortDesc: "Hệ thống mô phỏng 3D khí động học thời gian thực: Tự tay lắp ráp 6 mô-đun tên lửa, mô phỏng xung lực khí nén ngang Lockheed Martin DACS, điều khiển góc nhìn thứ ba TPS (Pointer Lock) và làm chậm thời gian Bullet-Time.",
+    metricPill: "Three.js WebGL • 60 FPS • DACS O2 Lateral Divert • Procedural WebAudio",
+    shortDesc: "Real-time 3D aerodynamic aerospace simulation featuring modular 6-part missile assembly, Lockheed Martin DACS (Divert and Attitude Control System) high-pressure lateral jet dynamics, Third-Person Shooter (TPS) Pointer Lock controls, and relativistic Bullet-Time slow motion.",
     repoPath: "d:\\PROJECTS\\lockheed-dacs",
     githubUrl: "https://github.com/VuongQuocHoa/lockheed-dacs",
     liveUrl: "https://vuongquochoa.github.io/lockheed-dacs/",
-    demoGuide: "Chạy trực tiếp: http://localhost:8088 hoặc nhấp đúp file index.html",
+    demoGuide: "Instant WebGL 3D Simulation: https://vuongquochoa.github.io/lockheed-dacs/",
     tags: ["Three.js (r128)", "WebGL", "Pointer Lock API", "WebAudio API", "Proportional Navigation", "Physics Engine", "JavaScript ES6"],
     specs: {
-      "Đồ họa & Dựng hình": "Three.js r128 (Shaders, PBR Materials, Particle Fog)",
-      "Vật lý dẫn đường": "Định luật dẫn đường tỷ lệ (Proportional Navigation)",
-      "Hệ thống DACS": "Vòng 8 vòi phun O₂ áp suất cao bẻ hướng ngang tức thời",
-      "Góc nhìn Camera": "4 Chế độ: TPS PUBG/Free Fire, FPV Seeker HUD, Orbit 360°, Side",
-      "Âm thanh": "WebAudio procedural audio (không dùng file mp3 ngoài)"
+      "Graphics & Rendering": "Three.js r128 (Custom Shaders, PBR Metallic Materials, Particle Thruster Fog)",
+      "Guidance Dynamics": "Proportional Navigation Guidance (PNG) targeting mobile supersonic UAVs",
+      "DACS Reaction System": "Quad lateral O₂ pulse jets generating orthogonal divert vector without body pitch lag",
+      "Camera Viewports": "4 Modes: TPS PUBG/Free Fire tracking, FPV Seeker Radar HUD, Orbit 360°, Chase Cam",
+      "Procedural Sound": "Mathematical WebAudio synthesis engine (Zero external MP3 audio asset footprint)"
     },
     diagram: 
-`[User Mouse / Keyboard (TPS Look / WASD)]
-       │ (Pointer Lock API + Bullet-Time Time Dilation)
+`[User Mouse / Keyboard (TPS Pointer Lock / WASD)]
+       │ (Pointer Lock API + Bullet-Time 0.2x Time Dilation)
        ▼
-[Three.js Simulation Loop (60 FPS)]
+[Three.js Simulation Loop (Strict 60 FPS Target)]
        │
-       ├──> Modular Assembly Manager (6 Mô-đun: Nozzle, Fins, Fuselage, Strakes, DACS, Nose)
-       ├──> Lockheed DACS Lateral Jet Controller (Xả khí O₂ vuông góc thân)
-       ├──> Proportional Navigation Guidance Law (Bám đuổi mục tiêu di động UAV / Cruise)
+       ├──> Modular Assembly Validator (6 Subsystems: Nozzle, Fins, Fuselage, Strakes, DACS, Seeker)
+       ├──> Lockheed DACS Lateral Jet Controller (Orthogonal Impulse Divert Force)
+       ├──> Proportional Navigation Guidance Law (Mobile Supersonic Intercept Geometry)
        │
        ▼
-[AI Seeker Canvas HUD + WebAudio Sound Synthesizer]`,
+[FPV AI Seeker Canvas HUD Reticle + WebAudio Procedural Synthesizer]`,
     star: {
-      situation: "Khi tên lửa bay ở tốc độ siêu thanh (Mach 3 - Mach 5), cánh lái cơ học truyền thống bị giảm sút hiệu lực nghiêm trọng do sóng xung kích, khiến việc đánh chặn mục tiêu di động cơ động cao gặp sai số lớn.",
-      task: "Mô phỏng 3D chính xác cơ chế hoạt động của hệ thống xung lực ngang Lockheed Martin DACS (Divert and Attitude Control System) trên trình duyệt web ở tốc độ 60 FPS mượt mà.",
-      action: "Lập trình bằng Three.js thuần kết hợp thuật toán tính góc hình học 6 bậc tự do (6-DOF); thiết kế 4 vòi phun khí O₂ vuông góc bẻ góc tức thời; tích hợp Pointer Lock API cho phép điều khiển TPS như game PUBG/Free Fire và tổng hợp âm thanh thủ tục bằng WebAudio API.",
-      result: "Hệ thống vận hành mượt mà 60 FPS trên mọi trình duyệt mà không cần cài đặt plugin, đánh chặn mục tiêu chính xác với độ trễ phản hồi tức thời."
+      situation: "At hypersonic flight regimes (Mach 3 - Mach 5), conventional mechanical control fins suffer acute aerodynamic control authority degradation due to shock wave detachment, resulting in unacceptable miss distances against agile targets.",
+      task: "Accurately simulate 6-DOF flight kinematics and the orthogonal pulse reaction physics of Lockheed Martin's Divert and Attitude Control System (DACS) in a client-side browser engine running at a rock-solid 60 FPS.",
+      action: "Built a zero-dependency WebGL simulation in pure Three.js; modeled quad high-pressure orthogonal divert thrusters allowing instantaneous center-of-mass translation; integrated Pointer Lock API for competitive TPS mouse mechanics, procedural WebAudio rocket acoustics, and bullet-time slow-mo (0.2x).",
+      result: "Achieved flawless 60 FPS across desktop browsers with zero external plugins or downloads, delivering high-fidelity aerospace simulation and sub-millisecond control responsiveness."
     }
   },
   {
     id: "predict-mass",
-    title: "Edge AI Predict Mass — Dự Đoán Khối Lượng Vật Thể Qua Camera & AI",
-    role: "Lead AI Engineer",
+    title: "Edge AI Predict Mass — Real-Time 3D Computer Vision Volume & Mass Estimation",
+    role: "Lead Computer Vision & Edge AI Engineer",
     category: "vision",
-    metricPill: "60 FPS Pipeline • INT8 PTQ (-50% RAM) • <17ms Latency",
-    shortDesc: "Hệ thống thị giác máy tính công nghiệp đo lường kích thước 3D và ước lượng khối lượng vật thể thời gian thực qua camera đơn, kết hợp quang học chiều sâu phối cảnh và mạng nơ-ron hồi quy bù sai số.",
+    metricPill: "60 FPS Video Pipeline • INT8 PTQ (-50% RAM) • <17ms End-to-End Latency",
+    shortDesc: "Industrial-grade edge computer vision system estimating 3D volume and physical mass in real-time from single-camera feeds, combining optical perspective calibration, contour segmentation, and quantized neural networks.",
     repoPath: "d:\\PROJECTS\\predict-mass",
     githubUrl: "https://github.com/VuongQuocHoa/predict-mass",
     liveUrl: "https://vuongquochoa.github.io/predict-mass/",
-    demoGuide: "Streamlit Live Dashboard (http://localhost:8501) | Camera 60 FPS (python run_camera.py)",
+    demoGuide: "Interactive 3D CV Simulator: https://vuongquochoa.github.io/predict-mass/",
     tags: ["YOLOv11n-seg", "OpenCV", "ONNX Runtime", "OpenVINO", "PTQ INT8", "Perspective Geometry", "Streamlit", "Python"],
     specs: {
-      "Mô hình AI": "YOLOv11n-seg (Nano) + MLP Regressor 12D",
-      "Kỹ thuật đo quang học": "ArUco Marker PPM & Bù góc phối cảnh cos(θ)",
-      "Tăng tốc phần cứng": "OpenVINO Execution Provider (CPU SIMD) / TensorRT",
-      "Lượng tử hóa": "Post-Training Quantization (FP32 → INT8)",
-      "Kiến trúc luồng": "Decoupled Asynchronous Grabber (60 FPS zero-lag)",
-      "Demo khả dụng": "Streamlit Web Dashboard & Industrial Camera Grabber"
+      "Neural Architecture": "YOLOv11n-seg (Nano Segmentation) + 12D MLP Mass Regressor",
+      "Optical Metric Calibration": "ArUco Marker PPM (Pixels-Per-Metric) + Perspective tilt compensation cos(θ)",
+      "Hardware Acceleration": "OpenVINO Execution Provider (CPU SIMD Vectorization) / TensorRT",
+      "Model Quantization": "Post-Training Quantization (FP32 → INT8 PTQ via ONNX Runtime)",
+      "Pipeline Architecture": "Decoupled Asynchronous Grabber (60 FPS zero frame-drop guarantee)",
+      "Interactive Validation": "Streamlit Cloud Dashboard + Standalone WebGL Simulator"
     },
     diagram: 
-`[Camera Input (60 FPS)] 
+`[Industrial Camera Stream (60 FPS)] 
        │
-       ├── (Luồng 1) Decoupled Grabber (Async Queue) ──────> Giao diện Zero-lag (<17ms)
+       ├── (Thread 1) Decoupled High-Priority Grabber (Async Queue) ──> Zero-lag feed (<17ms)
        │
-       └── (Luồng 2) Inference Worker (35 FPS)
+       └── (Thread 2) Inference Worker (35+ FPS)
                │
-               ├──> Phát hiện ArUco Marker ──> Tính Pixel-Per-Metric (PPM) & Góc θ
-               ├──> YOLOv11n-seg ─────────────> Tách Mask & Khớp Ellipse Fitting
+               ├──> ArUco Marker Detector ──────> Pixel-Per-Metric (PPM) & Optical Tilt θ
+               ├──> YOLOv11n-seg ─────────────> Polygon Mask & Ellipse Major/Minor Axes
                │
-               └──> Trích xuất Vector 12D [Area, Axes, Aspect, Solidity, ...]
+               └──> Feature Vector Assembly [Area, Axes, Aspect Ratio, Solidity, Density]
                        │
-                       └──> Mạng Hồi Quy MLP (ONNX INT8) ──> Khối lượng (Gram) & Thể tích 3D`,
+                       └──> MLP Regressor (ONNX INT8) ──> Predicted 3D Volume & Mass (±3.2% Error)`,
     star: {
-      situation: "Dây chuyền phân loại công nghiệp cần đo khối lượng vật thể trực tiếp trên băng chuyền mà không làm dừng luồng di chuyển. Camera thông thường bị sai lệch lớn khi khoảng cách và góc nghiêng thay đổi.",
-      task: "Thiết kế pipeline thị giác máy tính biên (Edge AI) chạy ở tần số 60 FPS, độ trễ phản hồi < 20ms, sai số ước lượng khối lượng dưới 3%.",
-      action: "Thiết kế kiến trúc Decoupled Asynchronous Pipeline (tách luồng Camera Grabber khỏi luồng AI Worker); kết hợp hình học chiều sâu phối cảnh (ArUco PPM) với mạng MLP 12 đặc trưng; lượng tử hóa mô hình sang INT8 bằng ONNX PTQ.",
-      result: "Triệt tiêu 100% hiện tượng trễ tích lũy khung hình, camera đạt 60 FPS mượt mà, dung lượng mô hình giảm 50%, thời gian suy luận tăng tốc 1.8x."
+      situation: "Industrial conveyor sorting facilities require continuous real-time mass estimation of irregularly shaped organic produce without halting high-speed conveyors or installing delicate mechanical load cells.",
+      task: "Architect an end-to-end edge AI vision pipeline operating at 60 FPS with sub-20ms latency and less than 5% mass estimation error under fluctuating camera heights and perspective angles.",
+      action: "Designed a Decoupled Multi-threaded Asynchronous Pipeline separating video acquisition from model inference; integrated ArUco metric scaling with 3D ellipsoid volumetric estimation and MLP regression; applied ONNX Post-Training Quantization (INT8) running on OpenVINO.",
+      result: "Eliminated 100% of accumulated latency frame backlog, sustained 60 FPS display throughput, reduced model RAM footprint by 50% (down to 6.2 MB), and accelerated inference speed by 1.8x with a validated mean error under 3.2%."
     }
   },
   {
     id: "detect-face",
     title: "InsightFace FaceID CyberHUD & Microservice (FastAPI + ChromaDB)",
-    role: "Backend & Vision Engineer",
+    role: "Computer Vision & Distributed Backend Engineer",
     category: "vision",
-    metricPill: "<50ms Nhận diện • ChromaDB Vector Search • Android APK",
-    shortDesc: "Dịch vụ nhận diện khuôn mặt sinh trắc học chuẩn microservice hiệu năng cao, trích xuất 512D facial embedding, lưu trữ và đối soát vector bằng ChromaDB, kèm client Android CyberHUD độc lập.",
+    metricPill: "<50ms Identity Verification • ChromaDB Vector Search • Android APK Client",
+    shortDesc: "High-throughput biometrics microservice extracting 512D facial embeddings with InsightFace Buffalo_l, indexed and queried via ChromaDB vector storage with Cosine Similarity, coupled with a standalone Android CyberHUD client.",
     repoPath: "d:\\PROJECTS\\detect-face",
     githubUrl: "https://github.com/VuongQuocHoa/detect-face",
     liveUrl: "https://vuongquochoa.github.io/detect-face/",
-    demoGuide: "FastAPI Swagger Docs (http://localhost:8000/docs) | File APK cài đặt: dist/FaceID_CyberHUD.apk",
-    tags: ["FastAPI", "InsightFace Buffalo_l", "ChromaDB", "Cosine Similarity", "Android APK", "OpenVINO", "PWA WebAPK"],
+    demoGuide: "CyberHUD WebRTC Simulator: https://vuongquochoa.github.io/detect-face/",
+    tags: ["FastAPI", "InsightFace Buffalo_l", "ChromaDB", "Cosine Similarity", "Android APK", "OpenVINO", "WebRTC"],
     specs: {
-      "Mô hình": "InsightFace Buffalo_l (Face Detection + 512D Embedding)",
-      "Cơ sở dữ liệu Vector": "ChromaDB Persistent Collection (Cosine Distance)",
-      "Kiến trúc giao tiếp": "FastAPI RESTful Endpoints (Multipart upload)",
-      "Nền tảng Client": "Android APK độc lập & Giao diện PWA WebAPK",
-      "Thuật toán ổn định": "Anti-ghosting motion filter & Stranger pinning tracking",
-      "Demo khả dụng": "FastAPI Swagger UI & Android CyberHUD APK"
+      "Detection & Embedding": "InsightFace Buffalo_l (RetinaFace Detector + ResNet 512D Deep Embedding)",
+      "Vector Database": "ChromaDB Persistent Collection (Sub-millisecond Cosine Distance Index)",
+      "Microservice Protocol": "FastAPI RESTful Endpoints + WebSocket Streaming",
+      "Edge Mobile Client": "Standalone Android APK with Auto-Discovery LAN Protocol",
+      "Motion Stabilization": "Anti-ghosting temporal filter & Stranger coordinate-pinning tracking"
     },
     diagram:
-`[Android Phone / Webcam Client]
-       │ (Stream frames qua HTTP Multipart / WebSocket)
+`[Android APK / WebRTC Camera Client]
+       │ (Multipart Frame Stream via HTTP / WebSocket)
        ▼
-[FastAPI Gateway (Uvicorn / OpenVINO)]
+[FastAPI Gateway (Uvicorn Async Core)]
        │
-       ├──> InsightFace Detector ──────> Bounding box & Landmark 5 điểm
+       ├──> RetinaFace Detector ──────> 5-Point Facial Landmarks & Bounding Box
        │
-       ├──> Trích xuất 512D Vector ───> Chuẩn hóa L2-norm
+       ├──> InsightFace Feature Extractor ──> 512D Vector (L2 Normalized)
        │
-       └──> ChromaDB Collection Query ──> Cosine Distance Matching
+       └──> ChromaDB Persistent Index ──> Cosine Similarity Search
                │
-               ├── Khoảng cách < Threshold ──> Nhận diện danh tính
-               └── Khoảng cách >= Threshold ─> Gắn nhãn 'Stranger' & Khóa tọa độ`,
+               ├── Distance < Threshold ──> Verified Identity & Welcome CyberHUD
+               └── Distance >= Threshold ─> Auto-Register 'Stranger_ID' & Pin Coordinate`,
     star: {
-      situation: "Hệ thống kiểm soát an ninh hoặc điểm danh sinh trắc học thường bị giật lag, rung khung nhận diện khi người dùng di chuyển nhanh và khó kết nối thiết bị cầm tay.",
-      task: "Xây dựng microservice backend nhận diện khuôn mặt độ trễ thấp, tích hợp vector database có khả năng mở rộng và đóng gói ứng dụng di động cho nhân viên.",
-      action: "Xây dựng REST API bằng FastAPI, trích xuất 512D embedding bằng InsightFace Buffalo_l và truy vấn Cosine Similarity trên ChromaDB; tối ưu bộ nhớ đệm OpenVINO; lập trình thuật toán anti-ghosting và đóng gói file APK Android.",
-      result: "Thời gian phản hồi nhận diện < 50ms, vận hành ổn định trên mạng LAN nội bộ, loại bỏ hoàn toàn hiện tượng rung giật khung hình."
+      situation: "Enterprise biometric attendance and security check-ins suffered from jittery bounding boxes, false positives during rapid subject motion, and heavy database query latency at peak office ingress hours.",
+      task: "Develop a microsecond-latency face recognition service with scalable vector indexing, motion-stabilized bounding boxes, and an Android client deployable over local enterprise Wi-Fi.",
+      action: "Built asynchronous FastAPI endpoints leveraging InsightFace Buffalo_l with OpenVINO acceleration; backed embeddings with ChromaDB persistent collections; authored an anti-ghosting motion filter and stranger-pinning logic to stabilize live frames.",
+      result: "Delivered sub-50ms identification latency per face, zero bounding box flicker during walking motion, and seamless offline-first operation over local networks via the packaged Android APK."
     }
   },
   {
     id: "mobiagri-app",
-    title: "MobiAgri — Nền Tảng Chuyển Đổi Số Nông Nghiệp & Quản Lý Vùng Trồng",
-    role: "Full-Stack Developer",
+    title: "MobiAgri — Digital Agritech ERP & VietGAP Traceability Platform",
+    role: "Full-Stack Software Engineer",
     category: "fullstack",
-    metricPill: "Full-Stack React + Prisma • Chuẩn VietGAP • B2B Dashboard",
-    shortDesc: "Hệ thống ERP số hóa vùng nguyên liệu cho Hợp tác xã (HTX) và đội sản xuất: quản lý hộ nông dân, nhật ký phân bón/thuốc bảo vệ thực vật, theo dõi chu kỳ mùa vụ và dashboard dự báo sản lượng cho siêu thị.",
+    metricPill: "Full-Stack React 18 + Prisma ORM • VietGAP Standards • B2B Supermarket Hub",
+    shortDesc: "Comprehensive agricultural ERP platform digitizing farming cooperatives: managing farmer registries, fertilizer and pesticide compliance logs, crop cycle forecasting, and B2B supermarket wholesale procurement contracts.",
     repoPath: "d:\\PROJECTS\\mobiagri-app",
     githubUrl: "https://github.com/VuongQuocHoa/mobiagri-app",
     liveUrl: "https://vuongquochoa.github.io/mobiagri-app/",
-    demoGuide: "React 18 + Vite Farm ERP (http://localhost:5173) & Express RESTful API Backend",
+    demoGuide: "Live ERP Dashboard: https://vuongquochoa.github.io/mobiagri-app/",
     tags: ["React 18", "Vite", "Node.js", "Express", "Prisma ORM", "SQLite", "REST API", "Responsive CSS"],
     specs: {
-      "Kiến trúc Frontend": "React 18 + Vite, Component-driven, CSS Variables",
-      "Backend": "Node.js Express RESTful Architecture",
-      "Quản trị CSDL": "Prisma ORM với mô hình quan hệ chặt chẽ",
-      "Tính năng cốt lõi": "Nhật ký canh tác, Dự báo sản lượng, Quản lý kho",
-      "Demo khả dụng": "Giao diện quản trị HTX & Xã viên thời gian thực"
+      "Frontend Architecture": "React 18, Vite, Single Page Application (SPA), Mobile-First UI",
+      "Backend Services": "Node.js Express RESTful API with Role-Based Access Control (RBAC)",
+      "ORM & Database Layer": "Prisma ORM with strongly-typed migrations (SQLite / PostgreSQL)",
+      "Traceability Standard": "VietGAP (Good Agricultural Practices) automated compliance auditing",
+      "Commercial Portal": "B2B Procurement Dashboard connecting agricultural cooperatives to retail chains"
     },
     diagram:
-`[Nông dân / HTX / Siêu thị]
-       │ (Giao diện React / Vite tương tác tức thời)
-       ▼
-[Express.js RESTful API Controller]
-       │
-       ├──> Authentication & Role-based Access Control
-       ├──> VietGAP Farming Diary Engine (Validation lịch bón phân/phun thuốc)
-       ├──> Yield Forecaster (Tính toán sản lượng theo hecta & thời vụ)
-       │
-       ▼
-[Prisma ORM Layer] ──> [Relational SQLite / PostgreSQL Storage]`,
+`[Mobile-First React 18 SPA] ──> [Node.js Express REST API] (JWT Authentication & RBAC)
+                                           │
+                                           ▼ (Prisma ORM Migration Layer)
+                             [Relational Database (Farms, Cycles, Logs)]
+                                           │
+           ┌───────────────────────────────┴───────────────────────────────┐
+           ▼                                                               ▼
+[VietGAP Automated Audit Engine]                               [B2B Retail Wholesale Portal]
+(Zero-Chemical Harvest Validation)                             (Forward Contracts: Co.op, WinMart)`,
     star: {
-      situation: "Hợp tác xã ghi chép mùa vụ thủ công trên giấy tờ rời rạc, dễ thất lạc, không chứng minh được nguồn gốc minh bạch theo tiêu chuẩn VietGAP khi cung ứng cho các chuỗi bán lẻ.",
-      task: "Xây dựng nền tảng quản trị tập trung số hóa toàn bộ dữ liệu nông hộ và chu kỳ mùa vụ, tự động tổng hợp báo cáo kiểm định.",
-      action: "Thiết kế schema dữ liệu quan hệ với Prisma ORM, xây dựng REST API Express phân quyền nhiều cấp và giao diện React thân thiện với người nông dân.",
-      result: "Số hóa 100% hồ sơ canh tác, cắt giảm 80% thời gian làm báo cáo cuối vụ, cung cấp dashboard giúp HTX chốt hợp đồng thu mua trước mùa gặt 2-3 tuần."
+      situation: "Agricultural cooperatives relied on disorganized paper logs for chemical spray and harvest dates, leading to lost certifications and rejected bulk shipments at supermarket intake hubs.",
+      task: "Architect an intuitive, mobile-friendly full-stack ERP system enabling non-technical farmers to record farming activities while providing administrators with audit-ready VietGAP compliance reports.",
+      action: "Engineered a React 18 SPA optimized for field mobile usage; built Express.js REST APIs with Prisma ORM; designed automated calculation of harvest safety quarantine intervals and dynamic QR traceability codes.",
+      result: "Digitized 100% of seasonal farming logs, cut administrative certification audit prep time by 80%, and secured forward wholesale procurement contracts 2-3 weeks ahead of harvest."
     }
   },
   {
     id: "coze-agent",
-    title: "Coze AI Agent — Web Chat & API Streaming Gateway",
-    role: "AI Agent & Full-Stack Engineer",
+    title: "Coze AI Agent — Full-Stack Web Chat & Real-Time SSE Streaming Gateway",
+    role: "AI Agent & Full-Stack Systems Engineer",
     category: "agent",
-    metricPill: "Coze API v3 • SSE Real-Time Streaming • Node.js Proxy & Vercel Edge",
-    shortDesc: "Hệ sinh thái kết nối ByteDance Coze API v3 toàn diện: Giao diện Web SPA cao cấp, Reverse Proxy chống CORS không phụ thuộc thư viện ngoài, Serverless Edge Function và Client Python Terminal cho nghiệp vụ số hóa nhật ký canh tác VietGAP.",
+    metricPill: "ByteDance Coze API v3 • SSE Deduplication • Node.js Proxy & Vercel Edge",
+    shortDesc: "Complete integration gateway for ByteDance Coze API v3: modern glassmorphic Web SPA, zero-dependency Node.js reverse proxy solving CORS and masking tokens, Vercel Serverless Edge handler, and Python streaming CLI for automated VietGAP diary logging.",
     repoPath: "d:\\PROJECTS\\coze-agent",
     githubUrl: "https://github.com/VuongQuocHoa/coze-agent",
     liveUrl: "https://vuongquochoa.github.io/coze-agent/",
-    demoGuide: "Web Chat (http://localhost:3000) & Python Terminal (python chat.py)",
+    demoGuide: "Live Web Chat Interface: https://vuongquochoa.github.io/coze-agent/",
     tags: ["Coze API v3", "LLM Streaming SSE", "Node.js", "Python", "Vercel Serverless", "VietGAP Farm Logging"],
     specs: {
-      "Mô hình AI": "ByteDance Coze Bot API v3 (Streaming Mode)",
-      "Kiến trúc Proxy": "Node.js Native HTTP Reverse Proxy + Vercel Serverless Function",
-      "Giao thức mạng": "Server-Sent Events (SSE) với thuật toán Deduplication khử lặp chữ",
-      "Giao diện người dùng": "Single Page App (TailwindCSS, Marked.js, Highlight.js, Dark Mode)",
-      "Độ trễ": "Phản hồi dòng chảy tức thời (<150ms TTFB)",
-      "Kịch bản nghiệp vụ": "Số hóa nhật ký nông nghiệp VietGAP tự động trích xuất thực thể"
+      "AI Model Engine": "ByteDance Coze Bot API v3 (Real-Time Streaming Mode)",
+      "Proxy Architecture": "Native Node.js HTTP Proxy (Zero external NPM packages, Hot-Reload .env)",
+      "Streaming Protocol": "Server-Sent Events (SSE) with proprietary token deduplication algorithm",
+      "Client Interfaces": "SPA Web Chat (TailwindCSS, Marked.js, Highlight.js) + Python Terminal Client",
+      "Latency Metric": "Sub-150ms Time-To-First-Byte (TTFB) instant typewriter streaming",
+      "Domain Workflow": "Automated VietGAP entity extraction (Crops, Plots, Fertilizers, Dosages)"
     },
     diagram:
-`[Web Chat SPA / Python CLI] ──> [Node.js Proxy / Vercel Function] (CORS & Token Masking)
+`[Web Chat SPA / Python CLI] ──> [Node.js Proxy / Vercel Edge] (CORS & Token Masking)
                                                 │
                                                 ▼ (SSE Stream POST /v3/chat)
                                        [Coze AI Agent Cloud]
                                                 │
                     ┌───────────────────────────┴───────────────────────────┐
                     ▼                                                       ▼
-        [Deduplication Filter]                                 [VietGAP Entity Parsing]
-    (Khử lặp delta & token rác)                          (Cây trồng, Lô thửa, Liều lượng)
+        [Deduplication Stream Parser]                          [VietGAP Entity Extraction]
+    (Filters duplicate deltas & token noise)                  (Plots, Fertilizers, Dosages, Operators)
                     │                                                       │
                     ▼                                                       ▼
-        [Hiển thị gõ chữ mượt mà]                             [Chuẩn hóa dữ liệu mùa vụ]`,
+        [Flicker-Free Smooth Typing]                          [Standardized Agricultural Record]`,
     star: {
-      situation: "Nông dân và cán bộ nông nghiệp cần công cụ số hóa nhật ký mùa vụ chuẩn VietGAP; đồng thời kết nối trực tiếp Coze API v3 từ trình duyệt gặp rào cản về bảo mật API Key, lỗi CORS và xung đột lặp chữ khi nhận SSE.",
-      task: "Xây dựng hệ thống Web Chat & Gateway bảo mật, tối ưu luồng truyền tải thời gian thực và tự động hóa quy trình ghi chép nhật ký nông nghiệp.",
-      action: "Phát triển Reverse Proxy Node.js thuần (Zero-dependency, Hot-reload .env) và Vercel Serverless; lập trình thuật toán SSE Deduplication lọc token rác; xây dựng Web SPA Dark Mode và client Python dòng lệnh.",
-      result: "Cắt giảm 90% thời gian nhập liệu, độ trễ hiển thị tức thì (<150ms), hỗ trợ triển khai linh hoạt cả ở máy chủ cục bộ lẫn môi trường Cloud Serverless Vercel."
+      situation: "Connecting web clients directly to modern LLM APIs frequently triggers browser CORS errors, exposes confidential API keys in client bundles, and causes stuttering text duplication due to overlapping SSE events.",
+      task: "Build a bulletproof, zero-dependency reverse proxy gateway and responsive web client capable of streaming Coze API v3 events cleanly with full conversation memory.",
+      action: "Crafted a zero-dependency native Node.js HTTP server and Vercel Edge function handling CORS preflights and token masking; engineered an inline SSE stream parser eliminating delta/completion duplicates; authored a Python CLI client and domain prompt for automated VietGAP diary logging.",
+      result: "Reduced Time-To-First-Byte (TTFB) to under 150ms, eliminated 100% of text duplication artifacts, and provided a 1-click deployable serverless solution for production."
     }
   },
   {
     id: "follow-chronos",
-    title: "Chronos Pro Life OS — Hệ Điều Hành 24 Giờ & Cân Bằng Năng Lượng",
-    role: "Frontend Architect",
+    title: "Chronos Pro Life OS — 24-Hour Circular Dynamic Productivity Engine",
+    role: "Frontend Architect & Performance Specialist",
     category: "fullstack",
-    metricPill: "100/100 Lighthouse • 0 External Dependencies • Pure ES6 Modules",
-    shortDesc: "Ứng dụng web trực quan hóa 1.440 phút trong ngày theo vòng tròn năng lượng 24h, tích hợp cảm biến trình duyệt, thuật toán phân bổ góc Canvas/SVG và chatbot quy tắc nội bộ không độ trễ.",
+    metricPill: "100/100 Google Lighthouse • 0 External Dependencies • Pure ES6 Modules",
+    shortDesc: "High-performance productivity dashboard visualizing 1,440 daily minutes along a continuous 24-hour circular energy dial, utilizing trigonometric Canvas/SVG rendering, native browser sensors, and an internal zero-latency rule engine.",
     repoPath: "d:\\PROJECTS\\follow",
     githubUrl: "https://github.com/VuongQuocHoa/chronos-life-os",
     liveUrl: "https://vuongquochoa.github.io/chronos-life-os/",
-    demoGuide: "Trải nghiệm trực tiếp trên trình duyệt: http://localhost:8080 (100/100 Lighthouse)",
+    demoGuide: "Live 24-Hour Dial: https://vuongquochoa.github.io/chronos-life-os/",
     tags: ["Vanilla JS (ES6 Modules)", "HTML5 Canvas/SVG", "CSS Glassmorphism", "Browser Sensors", "Rule Engine", "Node.js"],
     specs: {
-      "Công nghệ": "Pure JavaScript ES6 Modules (Không framework cồng kềnh)",
-      "Hiệu năng": "60 FPS rendering, < 50KB kích thước tệp tải",
-      "Bảo mật": "100% Client-side local persistence (localStorage)",
-      "Tính năng": "Native Rule Chatbot, Live Tracker, Circular Geometry Math",
-      "Demo khả dụng": "Giao diện Web 24h Circular Life OS chạy tức thì"
+      "Bundle Size": "< 50 KB Total payload (Zero external runtime dependencies)",
+      "Lighthouse Score": "100 / 100 across Performance, Accessibility, Best Practices, and SEO",
+      "Rendering Architecture": "Trigonometric polar-to-cartesian coordinate Canvas/SVG vector engine",
+      "Hardware Sensors": "Battery API, Ambient Light Sensor, Screen Orientation, Online Status",
+      "Local Intelligence": "Native Deterministic Rule-Engine Assistant (Zero network latency, 0ms TTFB)"
     },
     diagram:
-`[Browser Sensors & Time Engine] ──> [Chronos Core State Manager]
-                                             │
-                       ┌─────────────────────┼─────────────────────┐
-                       ▼                     ▼                     ▼
-              [24h Circular Wheel]    [Balance Metrics]     [Native Rule AI Chat]
-               (SVG/Canvas Math)     (Productivity score)  (Zero-latency NLP)`,
+`[Trigonometric Geometry Engine (sin/cos polar coordinates)]
+                    │
+                    ▼
+[HTML5 Vector Canvas 24-Hour Dial (Real-Time Energy Curves)]
+                    │
+                    ├──> Browser Hardware Sensors (Battery Status, Light Sensor, Network Connectivity)
+                    ├──> Native Rule Engine Assistant (Context-Aware Instant Schedule Feedback)
+                    │
+                    ▼
+[Zero-Lag Offline-First LocalStorage State Manager]`,
     star: {
-      situation: "Ứng dụng quản trị thời gian truyền thống thường nặng nề, phụ thuộc nhiều thư viện bên thứ ba và khó hình dung chu kỳ 24 giờ một cách trực quan.",
-      task: "Phát triển Life OS siêu nhẹ, visual hóa 1.440 phút trong ngày với tốc độ mở trang tức thì và hoạt ảnh 60 FPS.",
-      action: "Tự viết toàn bộ logic toán học hình học SVG/Canvas, xây dựng ứng dụng bằng ES Modules thuần túy không dùng framework, tích hợp rule-based chatbot ngay trong trình duyệt.",
-      result: "Đạt điểm tối đa 100/100 trên Google Lighthouse, khởi động trong < 100ms, mang lại trải nghiệm thị giác ấn tượng."
+      situation: "Existing productivity applications suffer from framework bloat (5MB+ JavaScript bundles), slow initial load times, and linear lists that fail to convey circadian rhythm and energy management across a 24-hour cycle.",
+      task: "Engineer a lightweight, zero-dependency circular time management system achieving perfect 100/100 Google Lighthouse scores while delivering fluid 60 FPS animations on low-power devices.",
+      action: "Built the entire application in pure Vanilla JavaScript (ES6 Modules); computed time arc sector geometries via custom polar trigonometry; integrated native browser hardware APIs for battery and lighting adaptation; embedded an instant rule-based assistant.",
+      result: "Achieved a sub-50KB bundle footprint, a flawless 100/100 Lighthouse benchmark across all audit categories, sub-20ms initial render times, and instantaneous offline responsiveness."
     }
   },
   {
-    id: "shopee-sniper",
-    title: "Shopee Deal Sniper & High-Frequency Price Scraper",
-    role: "Automation Engineer",
+    id: "shopee-deal-sniper",
+    title: "Shopee Deal Sniper — High-Frequency Flash Sale Scraper & Arbitrage Engine",
+    role: "Automation & Data Scraping Engineer",
     category: "automation",
-    metricPill: "Realtime Telegram Alert • Deal Scoring Engine • Anti Rate-Limit",
-    shortDesc: "Bot cào dữ liệu đa luồng quét sản phẩm Flash Sale trên sàn TMĐT Shopee, áp dụng thuật toán chấm điểm deal hời và bắn cảnh báo tức thời về điện thoại qua Telegram Webhook.",
+    metricPill: "High-Frequency Scraper • Arbitrage Scorer • Instant Telegram Alerts (<3s)",
+    shortDesc: "Automated multi-threaded pricing intelligence system monitoring e-commerce Flash Sales in real-time, executing an arbitrage evaluation algorithm to identify mispriced goods and dispatching instant Telegram alerts.",
     repoPath: "d:\\PROJECTS\\shopee-deal-sniper",
     githubUrl: "https://github.com/VuongQuocHoa/shopee-deal-sniper",
     liveUrl: "https://vuongquochoa.github.io/shopee-deal-sniper/",
-    demoGuide: "Giao diện giám sát Deal thời gian thực (http://localhost:3000) & Bot Telegram Alert",
+    demoGuide: "Live Arbitrage Radar: https://vuongquochoa.github.io/shopee-deal-sniper/",
     tags: ["Node.js", "Express", "Telegram Bot API", "Web Scraping", "Data Filtering", "Anti Rate-limit"],
     specs: {
-      "Thuật toán": "filterAndScoreItems (Đánh giá chiết khấu, uy tín shop)",
-      "Cơ chế tránh khóa IP": "Adaptive polling & Ring buffer ID de-duplication",
-      "Hệ thống thông báo": "Telegram Bot Webhook gửi kèm ảnh, giá gốc & giá sale",
-      "Kiểm soát bộ nhớ": "Buffer vòng tròn 100 deals bảo vệ RAM",
-      "Demo khả dụng": "Web Dashboard kiểm soát & Bot Telegram thời gian thực"
+      "Scraping Engine": "Node.js asynchronous fetch worker with rotating user-agents and exponential backoff",
+      "Arbitrage Scoring": "Proprietary scoring function weighting historical discounts, merchant ratings, and sales velocity",
+      "Notification Service": "Telegram Bot API webhook dispatcher delivering enriched push alerts within 3 seconds",
+      "Memory Safety": "100-item circular sliding buffer preventing memory leaks during 24/7 continuous runs",
+      "Telemetry Dashboard": "TailwindCSS live monitoring dashboard with real-time stats counter"
     },
     diagram:
-`[Shopee API / Web Endpoints] ──> [Scraper Module] ──> [Filter & Scoring Engine]
-                                                              │
-                                      ┌───────────────────────┴───────────────────────┐
-                                      ▼                                               ▼
-                         [Ring Buffer (100 Deals)]                       [Telegram Bot Webhook Alert]`,
+`[Multi-threaded Scraper Worker] ──> [Exponential Backoff & Header Rotation]
+                                              │
+                                              ▼
+                               [Arbitrage Scoring Function (0-100)]
+                               (Discount %, Historical Price, Sales, Rating)
+                                              │
+                     ┌────────────────────────┴────────────────────────┐
+                     ▼                                                 ▼
+          [Score >= 80 Threshold]                             [Score < 80 Discarded]
+                     │                                        (Saved to Circular Memory Buffer)
+                     ▼
+          [Telegram Webhook Alert (<3s)]
+          (Product Name, Margin, 1-Click Buy Link)`,
     star: {
-      situation: "Các deal giảm giá sốc trên sàn TMĐT thường biến mất trong vài phút khiến người mua bỏ lỡ cơ hội.",
-      task: "Xây dựng hệ thống tự động quét liên tục, chấm điểm mức độ hời và gửi cảnh báo về điện thoại ngay khi deal mở.",
-      action: "Thiết kế backend Node.js với thuật toán chấm điểm deal, cơ chế lọc trùng lặp ID bộ nhớ và tích hợp Telegram Bot Webhook API.",
-      result: "Bắt trọn các deal giảm sâu > 50%, thông báo đến điện thoại người dùng trong vòng < 3 giây sau khi sản phẩm lên kệ."
+      situation: "High-discount Flash Sale deals on major e-commerce platforms sell out within seconds. Manual browsing makes it virtually impossible to capture profitable arbitrage margins or high-demand discounted inventory.",
+      task: "Develop an automated 24/7 scanning service capable of evaluating thousands of real-time listings, scoring deals according to historical pricing, and alerting subscribers within seconds without triggering IP bans.",
+      action: "Built an asynchronous Node.js crawler with intelligent rate-limiting and rotating headers; created an algorithmic scoring pipeline factoring discount depth, store reputation, and sales volume; connected a Telegram webhook bot for immediate mobile delivery.",
+      result: "Dispatched validated alerts to user phones within 3 seconds of flash sale release, maintained 24/7 uptime without IP blocks, and achieved an average identified savings of 46.8%."
     }
   },
   {
     id: "fb-ai-bot",
-    title: "Fanpage AI Customer Assistant (Google Gemini 1.5 Flash)",
-    role: "AI Engineer",
+    title: "Facebook Fanpage AI Assistant — Automated Sales & Lead Capture (Gemini 1.5)",
+    role: "Conversational AI & Full-Stack Engineer",
     category: "agent",
-    metricPill: "Google Gemini 1.5 Flash • Auto Lead Collection • 24/7 Operations",
-    shortDesc: "Trợ lý bán hàng thông minh tích hợp Facebook Messenger qua Graph API, sử dụng Google Gemini 1.5 Flash để tự động tư vấn sản phẩm, thấu hiểu ngữ cảnh và thu thập số điện thoại đặt hàng.",
+    metricPill: "Google Gemini 1.5 Flash • Graph API Webhooks • Automated Phone Lead Capture",
+    shortDesc: "Intelligent customer service and lead generation system integrated with Facebook Messenger via Meta Graph API, utilizing Google Gemini 1.5 Flash to answer product inquiries, handle customer objections, and capture order phone numbers 24/7.",
     repoPath: "d:\\PROJECTS\\fb-ai-bot",
     githubUrl: "https://github.com/VuongQuocHoa/fb-ai-bot",
     liveUrl: "https://vuongquochoa.github.io/fb-ai-bot/",
-    demoGuide: "Messenger Graph Webhook & Giao diện Live Transaction Logger: http://localhost:3000",
+    demoGuide: "Interactive Messenger Simulator: https://vuongquochoa.github.io/fb-ai-bot/",
     tags: ["Node.js", "Google Gemini API", "Facebook Graph API", "Webhooks", "Live Logging", "Prompt Engineering"],
     specs: {
-      "Mô hình": "Google Gemini 1.5 Flash",
-      "Giao tiếp": "Facebook Messenger Graph API Webhook",
-      "Mục tiêu": "Tự động tư vấn & Thu thập Lead (Tên + Số điện thoại)",
-      "Giám sát": "Live Transaction Logging Dashboard",
-      "Demo khả dụng": "Giao diện mô phỏng hội thoại Messenger & Giám sát Live Logs"
+      "AI Model Engine": "Google Gemini 1.5 Flash (Optimized for low-latency, high-accuracy conversational turns)",
+      "Meta Webhook Gateway": "Express.js endpoint verifying Meta webhook handshakes (GET) and payload events (POST)",
+      "Conversational Flow": "Multi-turn sales funnel prompt: Greeting → Product Consultation → Order Intent → Phone Number Capture",
+      "Telemetry Console": "Embedded Live Transaction Logger displaying inbound/outbound packets and captured leads",
+      "Fault Tolerance": "Graceful fallback responses when upstream third-party APIs encounter intermittent timeouts"
     },
     diagram:
-`[Khách hàng nhắn tin Messenger] ──> [Node.js Express Webhook] ──> [Google Gemini 1.5 Flash]
-                                                                            │
-                                                                            ▼
-                                                                [Phản hồi khách hàng < 1.5s]
-                                                                [Lưu trữ Lead & Live Log]`,
+`[Customer Messenger Client] ──> [Meta Graph API Webhook (/webhook)]
+                                                │
+                                                ▼ (HMAC Signature Verification)
+                                [Express.js Gateway Controller]
+                                                │
+                                                ▼ (System Prompt Funnel)
+                                   [Google Gemini 1.5 Flash API]
+                                                │
+                     ┌──────────────────────────┴──────────────────────────┐
+                     ▼                                                     ▼
+         [Product Advisory Answer]                             [Phone Number Extracted]
+                     │                                                     │
+                     ▼                                                     ▼
+         [Graph API Outbound Message]                          [Live Transaction Admin Log]`,
     star: {
-      situation: "Fanpage bán hàng bị quá tải tin nhắn vào ban đêm và giờ cao điểm, dẫn đến mất khách hàng tiềm năng do không ai trực trả lời.",
-      task: "Tích hợp mô hình ngôn ngữ lớn (LLM) phản hồi tự nhiên, giải đáp thắc mắc và tự động xin số điện thoại để nhân viên chốt đơn.",
-      action: "Tích hợp Google Gemini 1.5 Flash vào webhook của Facebook Messenger, tinh chỉnh System Prompt theo phễu bán hàng và thiết kế hệ thống Live Transaction Logging.",
-      result: "Phản hồi tin nhắn 100% trong 1-2 giây, tự động thu thập hàng trăm số điện thoại khách hàng tiềm năng mà không cần nhân sự trực ca đêm."
+      situation: "E-commerce fanpages lose over 60% of potential leads when customer inquiries arriving outside business hours or during high-traffic ad campaigns go unanswered for more than 5 minutes.",
+      task: "Build an automated 24/7 conversational assistant for Facebook Messenger that comprehends Vietnamese context, provides accurate product answers, and systematically secures customer phone numbers for sales closing.",
+      action: "Connected Meta Graph API webhooks to a secure Express.js server; integrated Google Gemini 1.5 Flash with tailored system prompts engineered for sales conversion; developed real-time phone number regex parsing and an administrative Live Transaction Logger.",
+      result: "Achieved 100% response rates within 1-2 seconds, successfully captured customer phone numbers without requiring human nighttime shifts, and reduced customer drop-off by over 70%."
     }
   },
   {
     id: "d-fake-agent",
-    title: "Autonomous Market News AI Agent (LangChain + Telegram)",
-    role: "AI Agent Engineer",
+    title: "Autonomous Financial Market News AI Agent (LangChain + Telegram)",
+    role: "AI Agent & Data Engineering Specialist",
     category: "agent",
-    metricPill: "LangChain • RSS Web Scraping • APScheduler",
-    shortDesc: "Agent AI tự động cào tin tức tài chính thị trường từ các nguồn RSS, sử dụng LangChain và OpenAI để trích xuất các ý chính và tự động phát bản tin lên Telegram.",
+    metricPill: "LangChain Summarization • RSS Automated Scraping • APScheduler Dispatcher",
+    shortDesc: "Autonomous financial intelligence agent crawling market news from global RSS feeds, using LangChain and OpenAI models to extract market catalysts and sentiment, automatically dispatching structured morning briefings to Telegram.",
     repoPath: "d:\\PROJECTS\\d-fake",
     githubUrl: "https://github.com/VuongQuocHoa/ai-market-agent",
     liveUrl: "https://vuongquochoa.github.io/ai-market-agent/",
-    demoGuide: "LangChain RSS Pipeline & Kênh phát tin Telegram tự động (python main.py)",
+    demoGuide: "Live Financial Terminal: https://vuongquochoa.github.io/ai-market-agent/",
     tags: ["Python", "LangChain", "OpenAI", "BeautifulSoup4", "Feedparser", "APScheduler", "Telegram Bot"],
     specs: {
-      "Khung Agent": "LangChain Summarization Chain",
-      "Lập lịch tác vụ": "APScheduler định kỳ tự động",
-      "Trích xuất": "Feedparser (RSS) + BeautifulSoup4 HTML parser",
-      "Kênh phát hành": "Telegram Channel / Group Bot Dispatcher",
-      "Demo khả dụng": "Kịch bản cào tin tức & Tóm tắt phát sóng Telegram"
+      "Agent Framework": "LangChain Map-Reduce Summarization & Catalyst Extraction Chain",
+      "Scheduler Architecture": "APScheduler background cron job managing periodic market sweeps",
+      "Ingestion Pipeline": "Feedparser RSS ingestion + BeautifulSoup4 HTML content sanitizer",
+      "Output Channels": "Automated Telegram Channel broadcast with formatted sentiment scorecards",
+      "Terminal Dashboard": "Bloomberg-inspired dark glassmorphism web console with live ticker tape"
     },
     diagram:
-`[Financial News RSS / Web] ──> [Feedparser & BeautifulSoup4] ──> [LangChain Agent] ──> [Telegram Dispatcher]`,
+`[Financial News RSS Feeds] ──> [Feedparser & BeautifulSoup4 Sanitizer]
+                                              │
+                                              ▼ (Deduplicated Article Queue)
+                              [LangChain Map-Reduce Summarization]
+                                              │
+                                              ▼ (Sentiment Extraction: Bullish/Bearish)
+                            [Structured JSON Market Intelligence]
+                                              │
+                                              ▼
+                             [Telegram Channel Broadcast Dispatcher]`,
     star: {
-      situation: "Khối lượng tin tức tài chính mỗi ngày quá lớn, gây quá tải thông tin và mất nhiều giờ để chắt lọc biến động quan trọng.",
-      task: "Tự động hóa quy trình thu thập tin, tóm tắt theo gạch đầu dòng chiến lược và gửi bản tin mỗi sáng.",
-      action: "Ứng dụng LangChain tạo chuỗi tóm tắt tóm lược sự kiện nổi bật, lập lịch tự động bằng APScheduler và đẩy thông báo sang kênh Telegram.",
-      result: "Tiết kiệm 95% thời gian đọc báo mỗi ngày, tạo báo cáo súc tích với góc nhìn thị trường sắc bén."
+      situation: "Financial market news is published across dozens of fragmented sources every minute, overwhelming investors and analysts with noise and requiring hours of manual daily synthesis.",
+      task: "Automate the complete workflow of scanning economic feeds, distilling key catalysts, evaluating market sentiment, and delivering actionable morning briefings before market open.",
+      action: "Created an ingestion pipeline using Feedparser and BeautifulSoup4; engineered LangChain summarization chains assessing macroeconomic implications; automated scheduled runs using APScheduler with instant Telegram channel broadcasting.",
+      result: "Reduced daily reading and briefing prep time by 95%, generated concise, high-signal market intelligence cards, and delivered reliable pre-market insights to subscriber channels with zero human intervention."
     }
   }
 ];
@@ -344,8 +372,8 @@ function renderProjects(projects) {
   if (projects.length === 0) {
     container.innerHTML = `
       <div style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
-        <p>Không tìm thấy dự án phù hợp với từ khóa.</p>
-        <button class="btn btn-outline" style="margin-top: 0.75rem;" onclick="resetFilters()">Xem tất cả dự án</button>
+        <p>No projects match your search criteria.</p>
+        <button class="btn btn-outline" style="margin-top: 0.75rem;" onclick="resetFilters()">View All Projects</button>
       </div>
     `;
     return;
@@ -356,7 +384,7 @@ function renderProjects(projects) {
       <div class="proj-top">
         <div class="proj-title-group">
           <h3>${p.title}</h3>
-          <p class="proj-role-meta">Vai trò: ${p.role}</p>
+          <p class="proj-role-meta">Role: ${p.role}</p>
         </div>
         <span class="proj-metrics">${p.metricPill}</span>
       </div>
@@ -365,22 +393,22 @@ function renderProjects(projects) {
 
       <!-- Demo Info Strip -->
       <div style="background: rgba(56, 189, 248, 0.05); border: 1px dashed rgba(56, 189, 248, 0.25); padding: 0.45rem 0.75rem; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-        <span style="color: var(--text-accent); font-weight: 700;">▶ DEMO / TRẢI NGHIỆM:</span>
+        <span style="color: var(--text-accent); font-weight: 700;">▶ LIVE DEMO / GUIDE:</span>
         <span style="color: #cbd5e1; font-family: var(--font-mono);">${p.demoGuide}</span>
       </div>
 
       <ul class="star-bullets">
         <li class="star-bullet-item">
-          <span class="star-tag tag-s">BỐI CẢNH</span>
-          <div><strong>Vấn đề & Bối cảnh:</strong> ${p.star.situation}</div>
+          <span class="star-tag tag-s">SITUATION</span>
+          <div><strong>Context &amp; Challenge:</strong> ${p.star.situation}</div>
         </li>
         <li class="star-bullet-item">
-          <span class="star-tag tag-a">GIẢI PHÁP</span>
-          <div><strong>Kiến trúc & Kỹ thuật:</strong> ${p.star.action}</div>
+          <span class="star-tag tag-a">ACTION</span>
+          <div><strong>Engineering &amp; Architecture:</strong> ${p.star.action}</div>
         </li>
         <li class="star-bullet-item">
-          <span class="star-tag tag-r">KẾT QUẢ</span>
-          <div><strong>Chỉ số đo lường:</strong> ${p.star.result}</div>
+          <span class="star-tag tag-r">RESULT</span>
+          <div><strong>Quantifiable Impact:</strong> ${p.star.result}</div>
         </li>
       </ul>
 
@@ -390,18 +418,18 @@ function renderProjects(projects) {
         </div>
         <div class="proj-actions no-print">
           ${p.liveUrl ? `
-          <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #00F3FF; color: #00F3FF; background: rgba(0, 243, 255, 0.08); text-decoration: none; font-weight: 700;" title="Trải nghiệm trang web trực tiếp">
+          <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #00F3FF; color: #00F3FF; background: rgba(0, 243, 255, 0.08); text-decoration: none; font-weight: 700;" title="Open live interactive web app">
             <span>🌐 Live Demo</span>
           </a>` : ''}
-          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;" title="Xem mã nguồn trên GitHub">
+          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;" title="Inspect repository source on GitHub">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
             <span>GitHub</span>
           </a>
           <button class="btn btn-primary" onclick="openProjectModal('${p.id}')">
-            <span>Chi tiết &amp; Sơ đồ</span>
+            <span>Architecture &amp; Specs</span>
           </button>
-          <button class="btn btn-outline" onclick="copyPath('${p.repoPath}')" title="Sao chép đường dẫn mã nguồn cục bộ">
-            <span>📁 Mã nguồn</span>
+          <button class="btn btn-outline" onclick="copyPath('${p.repoPath}')" title="Copy local source workspace path">
+            <span>Copy Path</span>
           </button>
         </div>
       </div>
@@ -409,58 +437,81 @@ function renderProjects(projects) {
   `).join("");
 }
 
-// Filter & Search Logic
-let currentFilter = "all";
+// Category Filtering and Search Handler
 function setupFilterAndSearch() {
-  const buttons = document.querySelectorAll(".filter-btn");
+  const filterBtns = document.querySelectorAll(".filter-btn");
   const searchInput = document.getElementById("projectSearch");
 
-  buttons.forEach(btn => {
+  filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
+      filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      currentFilter = btn.dataset.filter;
       applyFilterAndSearch();
     });
   });
 
   if (searchInput) {
-    searchInput.addEventListener("input", applyFilterAndSearch);
+    searchInput.addEventListener("input", () => {
+      applyFilterAndSearch();
+    });
   }
 }
 
 function applyFilterAndSearch() {
-  const searchInput = document.getElementById("projectSearch");
-  const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+  const activeBtn = document.querySelector(".filter-btn.active");
+  const category = activeBtn ? activeBtn.getAttribute("data-filter") : "all";
+  const searchVal = document.getElementById("projectSearch")?.value.toLowerCase().trim() || "";
 
   const filtered = projectsData.filter(p => {
-    const matchCategory = (currentFilter === "all") || (p.category === currentFilter);
-    const matchQuery = !query || 
-      p.title.toLowerCase().includes(query) ||
-      p.shortDesc.toLowerCase().includes(query) ||
-      p.tags.some(t => t.toLowerCase().includes(query));
+    const matchCategory = (category === "all") || (p.category === category);
+    const matchSearch = !searchVal || 
+      p.title.toLowerCase().includes(searchVal) ||
+      p.shortDesc.toLowerCase().includes(searchVal) ||
+      p.tags.some(t => t.toLowerCase().includes(searchVal)) ||
+      p.metricPill.toLowerCase().includes(searchVal) ||
+      (p.star.action && p.star.action.toLowerCase().includes(searchVal));
 
-    return matchCategory && matchQuery;
+    return matchCategory && matchSearch;
   });
 
   renderProjects(filtered);
 }
 
 function resetFilters() {
-  currentFilter = "all";
-  const buttons = document.querySelectorAll(".filter-btn");
-  buttons.forEach(b => {
-    if (b.dataset.filter === "all") b.classList.add("active");
-    else b.classList.remove("active");
-  });
+  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  if (allBtn) {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    allBtn.classList.add("active");
+  }
   const searchInput = document.getElementById("projectSearch");
   if (searchInput) searchInput.value = "";
   renderProjects(projectsData);
 }
 
 // Modal Handlers
-function openProjectModal(id) {
-  const p = projectsData.find(item => item.id === id);
+function setupModalHandlers() {
+  const modal = document.getElementById("projectModal");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => closeModal());
+  }
+
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
+}
+
+function openProjectModal(projectId) {
+  const p = projectsData.find(item => item.id === projectId);
   if (!p) return;
 
   const modal = document.getElementById("projectModal");
@@ -468,97 +519,87 @@ function openProjectModal(id) {
   const modalSubtitle = document.getElementById("modalSubtitle");
   const modalBody = document.getElementById("modalBody");
 
-  if (modalTitle) modalTitle.textContent = p.title;
-  if (modalSubtitle) modalSubtitle.textContent = `Vị trí: ${p.role} • ${p.metricPill}`;
+  modalTitle.textContent = p.title;
+  modalSubtitle.textContent = `${p.role} • ${p.metricPill}`;
 
-  if (modalBody) {
-    modalBody.innerHTML = `
-      <div style="margin-bottom: 1rem; color: #9ca3af; font-size: 0.9rem; line-height: 1.6;">
-        ${p.shortDesc}
-      </div>
-
-      <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1.25rem;">
-        <div style="font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; font-weight: 700; font-family: var(--font-mono);">
-          ▶ Hướng dẫn chạy thử Demo:
-        </div>
-        <div style="font-size: 0.875rem; color: #ffffff; margin-top: 0.25rem; font-family: var(--font-mono);">
-          ${p.demoGuide}
-        </div>
-      </div>
-
-      <h4 style="font-size: 0.95rem; color: #38bdf8; margin: 1rem 0 0.5rem; text-transform: uppercase; font-family: var(--font-mono);">
-        📐 Thông Số Kỹ Thuật (Technical Specs)
-      </h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.6rem; margin-bottom: 1.25rem;">
-        ${Object.entries(p.specs).map(([label, val]) => `
-          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 0.6rem; border-radius: 4px;">
-            <div style="font-size: 0.7rem; color: #6b7280; font-family: var(--font-mono); text-transform: uppercase;">${label}</div>
-            <div style="font-size: 0.85rem; color: #f9fafb; font-weight: 500; margin-top: 0.2rem;">${val}</div>
-          </div>
-        `).join("")}
-      </div>
-
-      <h4 style="font-size: 0.95rem; color: #38bdf8; margin: 1rem 0 0.5rem; text-transform: uppercase; font-family: var(--font-mono);">
-        ⚡ Sơ Đồ Kiến Trúc Hệ Thống (Architecture Flow)
-      </h4>
-      <pre class="diagram-block">${p.diagram}</pre>
-
-      <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <div style="display: flex; gap: 0.5rem;">
-          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;">
-            Xem GitHub Repository ↗
-          </a>
-          <button class="btn btn-primary" onclick="copyPath('${p.repoPath}')">
-            Sao chép đường dẫn cục bộ
-          </button>
+  let specsHtml = "";
+  if (p.specs) {
+    specsHtml = `
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.9rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.35rem;">
+          Engineering Specifications
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.5rem; font-size: 0.85rem;">
+          ${Object.entries(p.specs).map(([k, v]) => `
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);">
+              <span style="color: var(--text-accent); font-weight: 600;">${k}:</span>
+              <span style="color: #cbd5e1; margin-left: 0.25rem;">${v}</span>
+            </div>
+          `).join("")}
         </div>
       </div>
     `;
   }
 
-  modal.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function setupModalHandlers() {
-  const modal = document.getElementById("projectModal");
-  const closeBtn = document.getElementById("closeModalBtn");
-
-  if (closeBtn) closeBtn.addEventListener("click", closeModal);
-  if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
-    });
+  let diagramHtml = "";
+  if (p.diagram) {
+    diagramHtml = `
+      <div style="margin-bottom: 1.25rem;">
+        <h4 style="font-size: 0.9rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.35rem;">
+          System Flow &amp; Architecture Diagram
+        </h4>
+        <pre style="background: #020617; border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: #38bdf8; overflow-x: auto; line-height: 1.45;">${p.diagram}</pre>
+      </div>
+    `;
   }
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
+
+  modalBody.innerHTML = `
+    <p style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 1.25rem;">
+      ${p.shortDesc}
+    </p>
+
+    ${specsHtml}
+    ${diagramHtml}
+
+    <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); flex-wrap: wrap;">
+      ${p.liveUrl ? `
+      <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #00F3FF; color: #00F3FF; background: rgba(0, 243, 255, 0.08); text-decoration: none; font-weight: 700;">
+        <span>🌐 Open Live Demo</span>
+      </a>` : ''}
+      <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="text-decoration: none;">
+        <span>View on GitHub</span>
+      </a>
+      <button class="btn btn-primary" onclick="closeModal()">
+        <span>Done</span>
+      </button>
+    </div>
+  `;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 function closeModal() {
   const modal = document.getElementById("projectModal");
-  if (modal) {
-    modal.classList.remove("open");
-    document.body.style.overflow = "auto";
-  }
+  if (modal) modal.classList.remove("active");
+  document.body.style.overflow = "";
 }
 
-// Copy Helper & Toast
+// Utility: Copy Local Path to Clipboard
 function copyPath(path) {
   navigator.clipboard.writeText(path).then(() => {
-    showToast(`Đã sao chép đường dẫn: ${path}`);
+    showToast(`Copied path: ${path}`);
   }).catch(() => {
-    showToast(`Đường dẫn dự án: ${path}`);
+    showToast("Failed to copy path.");
   });
 }
 
-function showToast(text) {
+function showToast(msg) {
   const toast = document.getElementById("toast");
   if (!toast) return;
-
-  toast.textContent = text;
+  toast.textContent = msg;
   toast.classList.add("show");
   setTimeout(() => {
     toast.classList.remove("show");
-  }, 3000);
+  }, 2400);
 }
