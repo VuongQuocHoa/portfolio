@@ -3,7 +3,7 @@
 
 <div align="center">
 
-[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Demo-vuongquochoa.github.io%2Fportfolio-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=black)](https://vuongquochoa.github.io/portfolio/)
+[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Demo-Render-00f0ff?style=for-the-badge&logo=render&logoColor=white)](https://vuongquochoa-portfolio.onrender.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-VuongQuocHoa-181717?style=for-the-badge&logo=github)](https://github.com/VuongQuocHoa)
 [![Email](https://img.shields.io/badge/Email-hoalkasd%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hoalkasd@gmail.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
@@ -36,7 +36,7 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 ## 🖨️ 2. How to Export ATS A4 PDF Resume for Applications
 
 The portfolio features a specialized `@media print` CSS engine calibrated for standard A4 company applications:
-1. Open the portfolio in your browser: **[vuongquochoa.github.io/portfolio](https://vuongquochoa.github.io/portfolio/)**.
+1. Open the portfolio in your browser: **[vuongquochoa-portfolio.onrender.com](https://vuongquochoa-portfolio.onrender.com/)**.
 2. Click **"Export PDF / Print"** on the top navigation bar (or press **Ctrl + P** / **Cmd + P**).
 3. Set **Destination**: Choose **"Save as PDF"**.
 4. Configure Print Options:
@@ -68,4 +68,4 @@ d:\PROJECTS\portfolio\
 - **Education:** Ho Chi Minh City University of Technology (HUTECH) — B.S. in Artificial Intelligence (2025–2029)
 - **Email:** [hoalkasd@gmail.com](mailto:hoalkasd@gmail.com)
 - **Phone / WhatsApp:** [+84 399 911 382](tel:+84399911382)
-- **Live Portfolio:** [vuongquochoa.github.io/portfolio](https://vuongquochoa.github.io/portfolio/)
+- **Live Portfolio:** [vuongquochoa-portfolio.onrender.com](https://vuongquochoa-portfolio.onrender.com/)

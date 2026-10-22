@@ -2,7 +2,7 @@
  * MINIMALIST TECH CV & PORTFOLIO ENGINE
  * Candidate: Vuong Quoc Hoa (Applied AI & Full-Stack Systems Engineer)
  * GitHub: https://github.com/VuongQuocHoa
- * Live Portfolio: https://vuongquochoa.github.io/portfolio/
+ * Live Portfolio: https://vuongquochoa-portfolio.onrender.com/
  */
 
 const projectsData = [
@@ -15,8 +15,8 @@ const projectsData = [
     shortDesc: "Real-time 3D aerodynamic aerospace simulation featuring modular 6-part missile assembly, Lockheed Martin DACS (Divert and Attitude Control System) high-pressure lateral jet dynamics, Third-Person Shooter (TPS) Pointer Lock controls, and relativistic Bullet-Time slow motion.",
     repoPath: "d:\\PROJECTS\\lockheed-dacs",
     githubUrl: "https://github.com/VuongQuocHoa/lockheed-dacs",
-    liveUrl: "https://vuongquochoa.github.io/lockheed-dacs/",
-    demoGuide: "Instant WebGL 3D Simulation: https://vuongquochoa.github.io/lockheed-dacs/",
+    liveUrl: "https://vuongquochoa-lockheed-dacs.onrender.com/",
+    demoGuide: "Instant WebGL 3D Simulation: https://vuongquochoa-lockheed-dacs.onrender.com/",
     tags: ["Three.js (r128)", "WebGL", "Pointer Lock API", "WebAudio API", "Proportional Navigation", "Physics Engine", "JavaScript ES6"],
     specs: {
       "Graphics & Rendering": "Three.js r128 (Custom Shaders, PBR Metallic Materials, Particle Thruster Fog)",
@@ -53,8 +53,8 @@ const projectsData = [
     shortDesc: "Industrial-grade edge computer vision system estimating 3D volume and physical mass in real-time from single-camera feeds, combining optical perspective calibration, contour segmentation, and quantized neural networks.",
     repoPath: "d:\\PROJECTS\\predict-mass",
     githubUrl: "https://github.com/VuongQuocHoa/predict-mass",
-    liveUrl: "https://vuongquochoa.github.io/predict-mass/",
-    demoGuide: "Interactive 3D CV Simulator: https://vuongquochoa.github.io/predict-mass/",
+    liveUrl: "https://vuongquochoa-predict-mass.onrender.com/",
+    demoGuide: "Interactive 3D CV Simulator: https://vuongquochoa-predict-mass.onrender.com/",
     tags: ["YOLOv11n-seg", "OpenCV", "ONNX Runtime", "OpenVINO", "PTQ INT8", "Perspective Geometry", "Streamlit", "Python"],
     specs: {
       "Neural Architecture": "YOLOv11n-seg (Nano Segmentation) + 12D MLP Mass Regressor",
@@ -93,8 +93,8 @@ const projectsData = [
     shortDesc: "High-throughput biometrics microservice extracting 512D facial embeddings with InsightFace Buffalo_l, indexed and queried via ChromaDB vector storage with Cosine Similarity, coupled with a standalone Android CyberHUD client.",
     repoPath: "d:\\PROJECTS\\detect-face",
     githubUrl: "https://github.com/VuongQuocHoa/detect-face",
-    liveUrl: "https://vuongquochoa.github.io/detect-face/",
-    demoGuide: "CyberHUD WebRTC Simulator: https://vuongquochoa.github.io/detect-face/",
+    liveUrl: "https://vuongquochoa-detect-face.onrender.com/",
+    demoGuide: "CyberHUD WebRTC Simulator: https://vuongquochoa-detect-face.onrender.com/",
     tags: ["FastAPI", "InsightFace Buffalo_l", "ChromaDB", "Cosine Similarity", "Android APK", "OpenVINO", "WebRTC"],
     specs: {
       "Detection & Embedding": "InsightFace Buffalo_l (RetinaFace Detector + ResNet 512D Deep Embedding)",
@@ -133,8 +133,8 @@ const projectsData = [
     shortDesc: "Comprehensive agricultural ERP platform digitizing farming cooperatives: managing farmer registries, fertilizer and pesticide compliance logs, crop cycle forecasting, and B2B supermarket wholesale procurement contracts.",
     repoPath: "d:\\PROJECTS\\mobiagri-app",
     githubUrl: "https://github.com/VuongQuocHoa/mobiagri-app",
-    liveUrl: "https://vuongquochoa.github.io/mobiagri-app/",
-    demoGuide: "Live ERP Dashboard: https://vuongquochoa.github.io/mobiagri-app/",
+    liveUrl: "https://vuongquochoa-mobiagri-app.onrender.com/",
+    demoGuide: "Live ERP Dashboard: https://vuongquochoa-mobiagri-app.onrender.com/",
     tags: ["React 18", "Vite", "Node.js", "Express", "Prisma ORM", "SQLite", "REST API", "Responsive CSS"],
     specs: {
       "Frontend Architecture": "React 18, Vite, Single Page Application (SPA), Mobile-First UI",
@@ -169,8 +169,8 @@ const projectsData = [
     shortDesc: "Complete integration gateway for ByteDance Coze API v3: modern glassmorphic Web SPA, zero-dependency Node.js reverse proxy solving CORS and masking tokens, Vercel Serverless Edge handler, and Python streaming CLI for automated VietGAP diary logging.",
     repoPath: "d:\\PROJECTS\\coze-agent",
     githubUrl: "https://github.com/VuongQuocHoa/coze-agent",
-    liveUrl: "https://vuongquochoa.github.io/coze-agent/",
-    demoGuide: "Live Web Chat Interface: https://vuongquochoa.github.io/coze-agent/",
+    liveUrl: "https://vuongquochoa-coze-agent.onrender.com/",
+    demoGuide: "Live Web Chat Interface: https://vuongquochoa-coze-agent.onrender.com/",
     tags: ["Coze API v3", "LLM Streaming SSE", "Node.js", "Python", "Vercel Serverless", "VietGAP Farm Logging"],
     specs: {
       "AI Model Engine": "ByteDance Coze Bot API v3 (Real-Time Streaming Mode)",
@@ -209,8 +209,8 @@ const projectsData = [
     shortDesc: "High-performance productivity dashboard visualizing 1,440 daily minutes along a continuous 24-hour circular energy dial, utilizing trigonometric Canvas/SVG rendering, native browser sensors, and an internal zero-latency rule engine.",
     repoPath: "d:\\PROJECTS\\follow",
     githubUrl: "https://github.com/VuongQuocHoa/chronos-life-os",
-    liveUrl: "https://vuongquochoa.github.io/chronos-life-os/",
-    demoGuide: "Live 24-Hour Dial: https://vuongquochoa.github.io/chronos-life-os/",
+    liveUrl: "https://vuongquochoa-chronos-life-os.onrender.com/",
+    demoGuide: "Live 24-Hour Dial: https://vuongquochoa-chronos-life-os.onrender.com/",
     tags: ["Vanilla JS (ES6 Modules)", "HTML5 Canvas/SVG", "CSS Glassmorphism", "Browser Sensors", "Rule Engine", "Node.js"],
     specs: {
       "Bundle Size": "< 50 KB Total payload (Zero external runtime dependencies)",
@@ -246,8 +246,8 @@ const projectsData = [
     shortDesc: "Automated multi-threaded pricing intelligence system monitoring e-commerce Flash Sales in real-time, executing an arbitrage evaluation algorithm to identify mispriced goods and dispatching instant Telegram alerts.",
     repoPath: "d:\\PROJECTS\\shopee-deal-sniper",
     githubUrl: "https://github.com/VuongQuocHoa/shopee-deal-sniper",
-    liveUrl: "https://vuongquochoa.github.io/shopee-deal-sniper/",
-    demoGuide: "Live Arbitrage Radar: https://vuongquochoa.github.io/shopee-deal-sniper/",
+    liveUrl: "https://vuongquochoa-shopee-deal-sniper.onrender.com/",
+    demoGuide: "Live Arbitrage Radar: https://vuongquochoa-shopee-deal-sniper.onrender.com/",
     tags: ["Node.js", "Express", "Telegram Bot API", "Web Scraping", "Data Filtering", "Anti Rate-limit"],
     specs: {
       "Scraping Engine": "Node.js asynchronous fetch worker with rotating user-agents and exponential backoff",
@@ -286,8 +286,8 @@ const projectsData = [
     shortDesc: "Intelligent customer service and lead generation system integrated with Facebook Messenger via Meta Graph API, utilizing Google Gemini 1.5 Flash to answer product inquiries, handle customer objections, and capture order phone numbers 24/7.",
     repoPath: "d:\\PROJECTS\\fb-ai-bot",
     githubUrl: "https://github.com/VuongQuocHoa/fb-ai-bot",
-    liveUrl: "https://vuongquochoa.github.io/fb-ai-bot/",
-    demoGuide: "Interactive Messenger Simulator: https://vuongquochoa.github.io/fb-ai-bot/",
+    liveUrl: "https://vuongquochoa-fb-ai-bot.onrender.com/",
+    demoGuide: "Interactive Messenger Simulator: https://vuongquochoa-fb-ai-bot.onrender.com/",
     tags: ["Node.js", "Google Gemini API", "Facebook Graph API", "Webhooks", "Live Logging", "Prompt Engineering"],
     specs: {
       "AI Model Engine": "Google Gemini 1.5 Flash (Optimized for low-latency, high-accuracy conversational turns)",
@@ -327,8 +327,8 @@ const projectsData = [
     shortDesc: "Autonomous financial intelligence agent crawling market news from global RSS feeds, using LangChain and OpenAI models to extract market catalysts and sentiment, automatically dispatching structured morning briefings to Telegram.",
     repoPath: "d:\\PROJECTS\\d-fake",
     githubUrl: "https://github.com/VuongQuocHoa/ai-market-agent",
-    liveUrl: "https://vuongquochoa.github.io/ai-market-agent/",
-    demoGuide: "Live Financial Terminal: https://vuongquochoa.github.io/ai-market-agent/",
+    liveUrl: "https://vuongquochoa-ai-market-agent.onrender.com/",
+    demoGuide: "Live Financial Terminal: https://vuongquochoa-ai-market-agent.onrender.com/",
     tags: ["Python", "LangChain", "OpenAI", "BeautifulSoup4", "Feedparser", "APScheduler", "Telegram Bot"],
     specs: {
       "Agent Framework": "LangChain Map-Reduce Summarization & Catalyst Extraction Chain",
